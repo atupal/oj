@@ -13,25 +13,30 @@ int allcnt;
 int dp[maxn];
 int ans[maxn];
 
+inline 
+int Min(int a, int b) {
+  return a < b ? a : b;
+}
+
 inline
 int solve(int x) {
-  if (x >= n) return 0;
+  if (x < 0) return 0;
   if (dp[x] != -1) return dp[x];
   int min = 0;
   int l = len[x];
   if (l < width) {
     min += 500;
   }
-  min += solve(x+1);
+  min += solve(x-1);
   ans[x] = x;
 
-  for (int i = x + 1; i < n; ++ i) {
+  for (int i = x - 1; i >= 0; -- i) {
     l += len[i] + 1;
     if (l <= width) {
-      int m = (width - l) % (i - x);
-      int nn = (width - l) / (i - x);
-      int score = m * ( (nn+1) * (nn+1) ) + (i - x - m) * (nn * nn); 
-      score += solve(i+1); 
+      int m = (width - l) % (x - i);
+      int n = (width - l) / (x - i);
+      int score = m * ( (n+1) * (n+1) ) + (x - i - m) * (n * n); 
+      score += solve(i-1); 
       if (score <= min) {
         min = score;
         ans[x] = i;
@@ -45,64 +50,76 @@ int solve(int x) {
 }
 
 void out(int x, int l) {
-  if (x >= n) {
+  if (x < 0) {
     return;
   }
   int sum = 0;
-  for (int i = x; i <= ans[x]; ++ i) 
+  for (int i = ans[x]; i <= x; ++ i) 
     sum += len[i];
 
-  int m = ans[x] - x == 0 ? 0 : (width - sum) % (ans[x] - x);
-  int nn = ans[x] - x == 0 ? 0 : (width - sum) / (ans[x] - x);
+  out(ans[x] - 1, l - sum);
+  int m = x - ans[x] == 0 ? 0 : (width - sum) % (x - ans[x]);
+  int nn = x - ans[x] == 0 ? 0 : (width - sum) / (x - ans[x]);
 
-  int bs = 0;
   int cnt = 0;
-  for (int i = x; i <= ans[x]; ++ i) {
+  int bs = 0;
+  for (int i = ans[x]; i <= x; ++ i) {
     for (int j = cnt; j < cnt + len[i]; ++ j) {
-      printf("%c", s[l + j]);
+      printf("%c", s[l-sum + +j]);
     }
     ++ bs;
-    if (bs <= ans[x] - x  - m) {
-      for (int k = 0; k < nn; ++ k) if (i != ans[x])
+    if (bs <= x - ans[x] - m) {
+      for (int k = 0; k < nn; ++ k) if (i != x)
         printf(" ");
         //printf("\033[31m+\033[0m");
     } else {
-      for (int k = 0; k <= nn; ++ k)  if (i != ans[x])
+      for (int k = 0; k <= nn; ++ k)  if (i != x)
         printf(" ");
         //printf("\033[31m+\033[0m");
     }
+    //printf(" ");
     cnt += len[i];
   }
 
-  printf("\n");
-  out(ans[x] + 1, l + sum);
+  if (nn == 0 and m == 0) {
+    for (int i = 0; i < width - len[x]; ++ i) {
+      //printf(" ");
+    }
+  }
+
+  if (x != n-1) {
+    printf("\n");
+  }
 }
 
 int main() {
   width = -1; // init 
   while (1) {
+    int flag = 0;
     if (width != -1) {
-      printf("\n");
+      flag = 1;
+      printf("\n\n");
     }
     scanf("%d", &width);
     if (!width) {
       break;
+    } else if(flag){
+      //printf("\n\n");
     }
     getchar();
     n = 0;
     allcnt = -1;
     memset(dp, -1, sizeof(dp));
+    //dp[0] = 0;
     memset(ans, 0, sizeof(ans));
     char a;
     int cnt = 0;
     while (1) {
       a = getchar();
       if (a == '\n') {
-        if (cnt > 0) {
-          len[n] = cnt;
-          cnt = 0;
-          ++ n;
-        }
+        len[n] = cnt;
+        cnt = 0;
+        ++ n;
         if ((a = getchar()) == '\n') {
           break;
         } else {
@@ -112,18 +129,18 @@ int main() {
       } else if (a != ' '){
         ++ cnt;
         s[++allcnt] = a;
-      } else if(cnt > 0){
+      } else {
         len[n] = cnt;
         cnt = 0;
         ++ n;
       }
     }
     s[++allcnt] = '\0';
-    solve(0);
-    //int score = solve(0);
+    solve(n);
+    //int score = solve(n);
     //printf("%d\n", score);
     //printf("%s\n", s);
-    out(0, 0);
+    out(n-1, allcnt);
   }
 
   return 0;
