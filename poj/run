@@ -1,0 +1,6 @@
+#!/bin/env zsh
+
+for x in $(seq 5 50)
+do
+  ./1032_Parliament  <<<$x
+done

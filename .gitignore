@@ -1,0 +1,5 @@
+*.html
+ts.cpp
+*.out
+input
+output

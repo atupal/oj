@@ -1,0 +1,1407 @@
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="faqs.php">F.A.Qs</a></th>
+		<th><a href="./bbs.php">Web Board</a></th>
+		<th><a href="./">Home</a></th>
+		<th><a href="./problemset.php">ProblemSet</a></th>
+		<th><a href="./status.php">Status</a></th>
+		<th><a href="./ranklist.php">Ranklist</a></th>
+		<th><a href="./contest.php">Contest</a></th>
+		<th><a href=loginpage.php>Login</a></th><th><a href=registerpage.php>Register</a></th>		<th><a href="./donation.php" class="highlight">捐赠本站</a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>祝大家新年快乐！	</div>
+</div>
+</center>
+</div>
+<title>Problem 1000. -- A+B Problem</title><center><h2>1000: A+B Problem</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>10 MB<br><span class=green>Submit: </span>5085&nbsp;&nbsp;<span class=green>Solved: </span>3303<br>[<a href='submitpage.php?id=1000'>Submit</a>][<a href='problemstatus.php?id=1000'>Status</a>][<a href='bbs.php?id=1000'>Discuss</a>]</center><h2>Description</h2><div class=content>Calculate a+b </div><h2>Input</h2><div class=content>Two integer a,b (0<=a,b<=10)</div><h2>Output</h2><div class=content>Output a+b</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1 2</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3</span></div><h2>HINT</h2>
+			<div class=content><p>Q: Where are the input and the output?<br />
+<br />
+A: Your program shall always <font color=red>read input from stdin (Standard Input) and write output to stdout (Standard Output)</font>. For example, you can use 'scanf' in C or 'cin' in C++ to read from stdin, and use 'printf' in C or 'cout' in C++ to write to stdout.<br />
+<br />
+You <font color=red>shall not output any extra data</font> to standard output other than that required by the problem, otherwise you will get a "Wrong Answer".<br />
+<br />
+User programs are not allowed to open and read from/write to files. You will get a "Runtime Error" or a "Wrong Answer" if you try to do so. <br />
+<br />
+Here is a sample solution for problem 1000 using C++/G++:<br />
+<pre><br />
+#include <iostream><br />
+using namespace std;<br />
+int  main()<br />
+{<br />
+    int a,b;<br />
+    cin >> a >> b;<br />
+    cout << a+b << endl;<br />
+    return 0;<br />
+}</pre><br />
+It's important that the return type of main() must be int when you use G++/GCC,or you may get compile error.<br />
+<br />
+Here is a sample solution for problem 1000 using C/GCC:<br />
+<pre><br />
+#include <stdio.h><br />
+<br />
+int main()<br />
+{<br />
+    int a,b;<br />
+    scanf("%d %d",&a, &b);<br />
+    printf("%d\n",a+b);<br />
+    return 0;<br />
+}</pre><br />
+Here is a sample solution for problem 1000 using PASCAL:<br />
+<pre><br />
+program p1000(Input,Output); <br />
+var <br />
+  a,b:Integer; <br />
+begin <br />
+   Readln(a,b); <br />
+   Writeln(a+b); <br />
+end.</pre><br />
+Here is a sample solution for problem 1000 using JAVA:<br />
+<br />
+Now java compiler is jdk 1.5, next is program for 1000<br />
+<pre><br />
+import java.io.*;<br />
+import java.util.*;<br />
+public class Main<br />
+{<br />
+            public static void main(String args[]) throws Exception<br />
+            {<br />
+                    Scanner cin=new Scanner(System.in);<br />
+                    int a=cin.nextInt(),b=cin.nextInt();<br />
+                    System.out.println(a+b);<br />
+            }<br />
+}</pre><br />
+Old program for jdk 1.4<br />
+<pre><br />
+import java.io.*;<br />
+import java.util.*;<br />
+<br />
+public class Main<br />
+{<br />
+    public static void main (String args[]) throws Exception<br />
+    {<br />
+        BufferedReader stdin = <br />
+            new BufferedReader(<br />
+                new InputStreamReader(System.in));<br />
+<br />
+        String line = stdin.readLine();<br />
+        StringTokenizer st = new StringTokenizer(line);<br />
+        int a = Integer.parseInt(st.nextToken());<br />
+        int b = Integer.parseInt(st.nextToken());<br />
+        System.out.println(a+b);<br />
+    }<br />
+}</pre></p></div><h2>Source</h2>
+			<div class=content><p><a href='problemset.php?search=POJ'>POJ</a></p></div><center>[<a href='submitpage.php?id=1000'>Submit</a>][<a href='problemstatus.php?id=1000'>Status</a>][<a href='bbs.php?id=1000'>Discuss</a>]</center>﻿<br>
+
+<a href="./"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href=setlang.php?lang=ko>한국어</a>&nbsp;
+		<a href=setlang.php?lang=cn>中文</a>&nbsp;
+		<a href=setlang.php?lang=fa>فارسی</a>&nbsp;
+		<a href=setlang.php?lang=en>English</a>&nbsp;
+		<a href=setlang.php?lang=th>ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2012 大视野在线测评 | <script src="http://s21.cnzz.com/stat.php?id=2982771&web_id=2982771" language="JavaScript"></script>
+</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="faqs.php">F.A.Qs</a></th>
+		<th><a href="./bbs.php">Web Board</a></th>
+		<th><a href="./">Home</a></th>
+		<th><a href="./problemset.php">ProblemSet</a></th>
+		<th><a href="./status.php">Status</a></th>
+		<th><a href="./ranklist.php">Ranklist</a></th>
+		<th><a href="./contest.php">Contest</a></th>
+		<th><a href=loginpage.php>Login</a></th><th><a href=registerpage.php>Register</a></th>		<th><a href="./donation.php" class="highlight">捐赠本站</a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>祝大家新年快乐！	</div>
+</div>
+</center>
+</div>
+<title>Problem 1001. -- [BeiJing2006]狼抓兔子</title><center><h2>1001: [BeiJing2006]狼抓兔子</h2><span class=green>Time Limit: </span>15 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>5183&nbsp;&nbsp;<span class=green>Solved: </span>1143<br>[<a href='submitpage.php?id=1001'>Submit</a>][<a href='problemstatus.php?id=1001'>Status</a>][<a href='bbs.php?id=1001'>Discuss</a>]</center><h2>Description</h2><div class=content>现在小朋友们最喜欢的"喜羊羊与灰太狼",话说灰太狼抓羊不到，但抓兔子还是比较在行的，而且现在的兔子还比较笨，它们只有两个窝，现在你做为狼王，面对下面这样一个网格的地形：
+
+<img border="0" src="images/1001.jpg">
+左上角点为(1,1),右下角点为(N,M)(上图中N=4,M=5).有以下三种类型的道路
+1:(x,y)<==>(x+1,y)
+2:(x,y)<==>(x,y+1)
+3:(x,y)<==>(x+1,y+1)
+道路上的权值表示这条路上最多能够通过的兔子数，道路是无向的.
+左上角和右下角为兔子的两个窝，开始时所有的兔子都聚集在左上角(1,1)的窝里，现在它们要跑到右下解(N,M)的窝中去，狼王开始伏击这些兔子.当然为了保险起见，如果一条道路上最多通过的兔子数为K，狼王需要安排同样数量的K只狼，才能完全封锁这条道路，你需要帮助狼王安排一个伏击方案，使得在将兔子一网打尽的前提下，参与的狼的数量要最小。因为狼还要去找喜羊羊麻烦.
+</div><h2>Input</h2><div class=content>第一行为N,M.表示网格的大小，N,M均小于等于1000.接下来分三部分
+第一部分共N行，每行M-1个数，表示横向道路的权值.
+第二部分共N-1行，每行M个数，表示纵向道路的权值.
+第三部分共N-1行，每行M-1个数，表示斜向道路的权值.
+输入文件保证不超过10M
+</div><h2>Output</h2><div class=content>输出一个整数，表示参与伏击的狼的最小数量.
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3 4<br />
+5 6 4<br />
+4 3 1<br />
+7 5 3<br />
+5 6 7 8<br />
+8 7 6 5<br />
+5 5 5<br />
+6 6 6<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>14</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='problemset.php?search='></a></p></div><center>[<a href='submitpage.php?id=1001'>Submit</a>][<a href='problemstatus.php?id=1001'>Status</a>][<a href='bbs.php?id=1001'>Discuss</a>]</center>﻿<br>
+
+<a href="./"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href=setlang.php?lang=ko>한국어</a>&nbsp;
+		<a href=setlang.php?lang=cn>中文</a>&nbsp;
+		<a href=setlang.php?lang=fa>فارسی</a>&nbsp;
+		<a href=setlang.php?lang=en>English</a>&nbsp;
+		<a href=setlang.php?lang=th>ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2012 大视野在线测评 | <script src="http://s21.cnzz.com/stat.php?id=2982771&web_id=2982771" language="JavaScript"></script>
+</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="faqs.php">F.A.Qs</a></th>
+		<th><a href="./bbs.php">Web Board</a></th>
+		<th><a href="./">Home</a></th>
+		<th><a href="./problemset.php">ProblemSet</a></th>
+		<th><a href="./status.php">Status</a></th>
+		<th><a href="./ranklist.php">Ranklist</a></th>
+		<th><a href="./contest.php">Contest</a></th>
+		<th><a href=loginpage.php>Login</a></th><th><a href=registerpage.php>Register</a></th>		<th><a href="./donation.php" class="highlight">捐赠本站</a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>祝大家新年快乐！	</div>
+</div>
+</center>
+</div>
+<title>Problem 1002. -- [FJOI2007]轮状病毒
+</title><center><h2>1002: [FJOI2007]轮状病毒
+</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>1138&nbsp;&nbsp;<span class=green>Solved: </span>626<br>[<a href='submitpage.php?id=1002'>Submit</a>][<a href='problemstatus.php?id=1002'>Status</a>][<a href='bbs.php?id=1002'>Discuss</a>]</center><h2>Description</h2><div class=content><img border="0" src="images/1002/1.jpg">
+
+给定n(N<=100)，编程计算有多少个不同的n轮状病毒。 
+</div><h2>Input</h2><div class=content>第一行有1个正整数n。 
+</div><h2>Output</h2><div class=content>将编程计算出的不同的n轮状病毒数输出 
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>16<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='problemset.php?search='></a></p></div><center>[<a href='submitpage.php?id=1002'>Submit</a>][<a href='problemstatus.php?id=1002'>Status</a>][<a href='bbs.php?id=1002'>Discuss</a>]</center>﻿<br>
+
+<a href="./"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href=setlang.php?lang=ko>한국어</a>&nbsp;
+		<a href=setlang.php?lang=cn>中文</a>&nbsp;
+		<a href=setlang.php?lang=fa>فارسی</a>&nbsp;
+		<a href=setlang.php?lang=en>English</a>&nbsp;
+		<a href=setlang.php?lang=th>ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2012 大视野在线测评 | <script src="http://s21.cnzz.com/stat.php?id=2982771&web_id=2982771" language="JavaScript"></script>
+</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="faqs.php">F.A.Qs</a></th>
+		<th><a href="./bbs.php">Web Board</a></th>
+		<th><a href="./">Home</a></th>
+		<th><a href="./problemset.php">ProblemSet</a></th>
+		<th><a href="./status.php">Status</a></th>
+		<th><a href="./ranklist.php">Ranklist</a></th>
+		<th><a href="./contest.php">Contest</a></th>
+		<th><a href=loginpage.php>Login</a></th><th><a href=registerpage.php>Register</a></th>		<th><a href="./donation.php" class="highlight">捐赠本站</a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>祝大家新年快乐！	</div>
+</div>
+</center>
+</div>
+<title>Problem 1003. -- [ZJOI2006]物流运输trans</title><center><h2>1003: [ZJOI2006]物流运输trans</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>1825&nbsp;&nbsp;<span class=green>Solved: </span>687<br>[<a href='submitpage.php?id=1003'>Submit</a>][<a href='problemstatus.php?id=1003'>Status</a>][<a href='bbs.php?id=1003'>Discuss</a>]</center><h2>Description</h2><div class=content>物流公司要把一批货物从码头A运到码头B。由于货物量比较大，需要n天才能运完。货物运输过程中一般要转停好几个码头。物流公司通常会设计一条固定的运输路线，以便对整个运输过程实施严格的管理和跟踪。由于各种因素的存在，有的时候某个码头会无法装卸货物。这时候就必须修改运输路线，让货物能够按时到达目的地。但是修改路线是一件十分麻烦的事情，会带来额外的成本。因此物流公司希望能够订一个n天的运输计划，使得总成本尽可能地小。
+
+</div><h2>Input</h2><div class=content>第一行是四个整数n（1<=n<=100）、m（1<=m<=20）、K和e。n表示货物运输所需天数，m表示码头总数，K表示每次修改运输路线所需成本。接下来e行每行是一条航线描述，包括了三个整数，依次表示航线连接的两个码头编号以及航线长度（>0）。其中码头A编号为1，码头B编号为m。单位长度的运输费用为1。航线是双向的。
+再接下来一行是一个整数d，后面的d行每行是三个整数P（ 1 < P < m）、a、b（1 < = a < = b < = n）。表示编号为P的码头从第a天到第b天无法装卸货物（含头尾）。同一个码头有可能在多个时间段内不可用。但任何时间都存在至少一条从码头A到码头B的运输路线。
+
+</div><h2>Output</h2><div class=content>包括了一个整数表示最小的总成本。总成本=n天运输路线长度之和+K*改变运输路线的次数。
+
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 5 10 8<br />
+1 2 1<br />
+1 3 3<br />
+1 4 2<br />
+2 3 2<br />
+2 4 4<br />
+3 4 1<br />
+3 5 2<br />
+4 5 2<br />
+4<br />
+2 2 3<br />
+3 1 1             <br />
+3 3 3<br />
+4 4 5<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Sample Output<br />
+32<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p>前三天走1-4-5，后两天走1-3-5，这样总成本为(2+2)*3+(3+2)*2+10=32<br />
+</p></div><h2>Source</h2>
+			<div class=content><p><a href='problemset.php?search='></a></p></div><center>[<a href='submitpage.php?id=1003'>Submit</a>][<a href='problemstatus.php?id=1003'>Status</a>][<a href='bbs.php?id=1003'>Discuss</a>]</center>﻿<br>
+
+<a href="./"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href=setlang.php?lang=ko>한국어</a>&nbsp;
+		<a href=setlang.php?lang=cn>中文</a>&nbsp;
+		<a href=setlang.php?lang=fa>فارسی</a>&nbsp;
+		<a href=setlang.php?lang=en>English</a>&nbsp;
+		<a href=setlang.php?lang=th>ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2012 大视野在线测评 | <script src="http://s21.cnzz.com/stat.php?id=2982771&web_id=2982771" language="JavaScript"></script>
+</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="faqs.php">F.A.Qs</a></th>
+		<th><a href="./bbs.php">Web Board</a></th>
+		<th><a href="./">Home</a></th>
+		<th><a href="./problemset.php">ProblemSet</a></th>
+		<th><a href="./status.php">Status</a></th>
+		<th><a href="./ranklist.php">Ranklist</a></th>
+		<th><a href="./contest.php">Contest</a></th>
+		<th><a href=loginpage.php>Login</a></th><th><a href=registerpage.php>Register</a></th>		<th><a href="./donation.php" class="highlight">捐赠本站</a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>祝大家新年快乐！	</div>
+</div>
+</center>
+</div>
+<title>Problem 1004. -- [HNOI2008]Cards</title><center><h2>1004: [HNOI2008]Cards</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>860&nbsp;&nbsp;<span class=green>Solved: </span>488<br>[<a href='submitpage.php?id=1004'>Submit</a>][<a href='problemstatus.php?id=1004'>Status</a>][<a href='bbs.php?id=1004'>Discuss</a>]</center><h2>Description</h2><div class=content><p>小春现在很清闲,面对书桌上的N张牌,他决定给每张染色,目前小春只有3种颜色:红色,蓝色,绿色.他询问Sun有多少种染色方案,Sun很快就给出了答案.进一步,小春要求染出Sr张红色,Sb张蓝色,Sg张绝色.他又询问有多少种方案,Sun想了一下,又给出了正确答案. 最后小春发明了M种不同的洗牌法,这里他又问Sun有多少种不同的染色方案.两种染色方法相同当且仅当其中一种可以通过任意的洗牌法(即可以使用多种洗牌法,而每种方法可以使用多次)洗成另一种.Sun发现这个问题有点难度,决定交给你,答案可能很大,只要求出答案除以P的余数(P为质数).</p>
+<p></p></div><h2>Input</h2><div class=content><p>第一行输入 5 个整数：Sr,Sb,Sg,m,p(m&lt;=60,m+1&lt;p&lt;100)。n=Sr+Sb+Sg。接下来 m 行，每行描述<br />
+一种洗牌法，每行有 n 个用空格隔开的整数 X1X2...Xn，恰为 1 到 n 的一个排列，表示使用这种洗牌法，<br />
+第 i位变为原来的 Xi位的牌。输入数据保证任意多次洗牌都可用这 m种洗牌法中的一种代替，且对每种<br />
+洗牌法，都存在一种洗牌法使得能回到原状态。</p>
+<p>100%数据满足 Max{Sr,Sb,Sg}&lt;=20。</p></div><h2>Output</h2><div class=content><p>不同染法除以P的余数</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>1 1 1 2 7<br />
+2 3 1<br />
+3 1 2<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>有2 种本质上不同的染色法RGB 和RBG，使用洗牌法231 一次可得GBR 和BGR，使用洗牌法312 一次 可得BRG 和GRB。</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='problemset.php?search='></a></p></div><center>[<a href='submitpage.php?id=1004'>Submit</a>][<a href='problemstatus.php?id=1004'>Status</a>][<a href='bbs.php?id=1004'>Discuss</a>]</center>﻿<br>
+
+<a href="./"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href=setlang.php?lang=ko>한국어</a>&nbsp;
+		<a href=setlang.php?lang=cn>中文</a>&nbsp;
+		<a href=setlang.php?lang=fa>فارسی</a>&nbsp;
+		<a href=setlang.php?lang=en>English</a>&nbsp;
+		<a href=setlang.php?lang=th>ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2012 大视野在线测评 | <script src="http://s21.cnzz.com/stat.php?id=2982771&web_id=2982771" language="JavaScript"></script>
+</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="faqs.php">F.A.Qs</a></th>
+		<th><a href="./bbs.php">Web Board</a></th>
+		<th><a href="./">Home</a></th>
+		<th><a href="./problemset.php">ProblemSet</a></th>
+		<th><a href="./status.php">Status</a></th>
+		<th><a href="./ranklist.php">Ranklist</a></th>
+		<th><a href="./contest.php">Contest</a></th>
+		<th><a href=loginpage.php>Login</a></th><th><a href=registerpage.php>Register</a></th>		<th><a href="./donation.php" class="highlight">捐赠本站</a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>祝大家新年快乐！	</div>
+</div>
+</center>
+</div>
+<title>Problem 1005. -- [HNOI2008]明明的烦恼</title><center><h2>1005: [HNOI2008]明明的烦恼</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>1025&nbsp;&nbsp;<span class=green>Solved: </span>405<br>[<a href='submitpage.php?id=1005'>Submit</a>][<a href='problemstatus.php?id=1005'>Status</a>][<a href='bbs.php?id=1005'>Discuss</a>]</center><h2>Description</h2><div class=content>自从明明学了树的结构,就对奇怪的树产生了兴趣......
+给出标号为1到N的点,以及某些点最终的度数,允许在任意两点间连线,可产生多少棵度数满足要求的树?
+</div><h2>Input</h2><div class=content>第一行为N(0 < N < =  1000),接下来N行,第i+1行给出第i个节点的度数Di,如果对度数不要求,则输入-1
+</div><h2>Output</h2><div class=content>一个整数,表示不同的满足要求的树的个数,无解输出0
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+1<br />
+-1<br />
+-1<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>2</span></div><h2>HINT</h2>
+			<div class=content><p>两棵树分别为1-2-3;1-3-2</p></div><h2>Source</h2>
+			<div class=content><p><a href='problemset.php?search='></a></p></div><center>[<a href='submitpage.php?id=1005'>Submit</a>][<a href='problemstatus.php?id=1005'>Status</a>][<a href='bbs.php?id=1005'>Discuss</a>]</center>﻿<br>
+
+<a href="./"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href=setlang.php?lang=ko>한국어</a>&nbsp;
+		<a href=setlang.php?lang=cn>中文</a>&nbsp;
+		<a href=setlang.php?lang=fa>فارسی</a>&nbsp;
+		<a href=setlang.php?lang=en>English</a>&nbsp;
+		<a href=setlang.php?lang=th>ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2012 大视野在线测评 | <script src="http://s21.cnzz.com/stat.php?id=2982771&web_id=2982771" language="JavaScript"></script>
+</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="faqs.php">F.A.Qs</a></th>
+		<th><a href="./bbs.php">Web Board</a></th>
+		<th><a href="./">Home</a></th>
+		<th><a href="./problemset.php">ProblemSet</a></th>
+		<th><a href="./status.php">Status</a></th>
+		<th><a href="./ranklist.php">Ranklist</a></th>
+		<th><a href="./contest.php">Contest</a></th>
+		<th><a href=loginpage.php>Login</a></th><th><a href=registerpage.php>Register</a></th>		<th><a href="./donation.php" class="highlight">捐赠本站</a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>祝大家新年快乐！	</div>
+</div>
+</center>
+</div>
+<title>Problem 1006. -- [HNOI2008]神奇的国度</title><center><h2>1006: [HNOI2008]神奇的国度</h2><span class=green>Time Limit: </span>20 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>984&nbsp;&nbsp;<span class=green>Solved: </span>383<br>[<a href='submitpage.php?id=1006'>Submit</a>][<a href='problemstatus.php?id=1006'>Status</a>][<a href='bbs.php?id=1006'>Discuss</a>]</center><h2>Description</h2><div class=content>K国是一个热衷三角形的国度,连人的交往也只喜欢三角原则.他们认为三角关系:即AB相互认识,BC相互认识,CA相互认识,是简洁高效的.为了巩固三角关系,K国禁止四边关系,五边关系等等的存在.所谓N边关系,是指N个人
+A1A2...An之间仅存在N对认识关系:(A1A2)(A2A3)...(AnA1),而没有其它认识关系.比如四边关系指ABCD四个人
+AB,BC,CD,DA相互认识,而AC,BD不认识.全民比赛时,为了防止做弊，规定任意一对相互认识的人不得在一队，国王相知道，最少可以分多少支队。
+</div><h2>Input</h2><div class=content>第一行两个整数N，M。1<=N<=10000,1<=M<=1000000.表示有N个人，M对认识关系.
+接下来M行每行输入一对朋友
+</div><h2>Output</h2><div class=content>输出一个整数，最少可以分多少队
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 5<br />
+1 2<br />
+1 4<br />
+2 4<br />
+2 3<br />
+3 4<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>3</span></div><h2>HINT</h2>
+			<div class=content><p>一种方案(1,3)(2)(4)</p></div><h2>Source</h2>
+			<div class=content><p><a href='problemset.php?search='></a></p></div><center>[<a href='submitpage.php?id=1006'>Submit</a>][<a href='problemstatus.php?id=1006'>Status</a>][<a href='bbs.php?id=1006'>Discuss</a>]</center>﻿<br>
+
+<a href="./"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href=setlang.php?lang=ko>한국어</a>&nbsp;
+		<a href=setlang.php?lang=cn>中文</a>&nbsp;
+		<a href=setlang.php?lang=fa>فارسی</a>&nbsp;
+		<a href=setlang.php?lang=en>English</a>&nbsp;
+		<a href=setlang.php?lang=th>ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2012 大视野在线测评 | <script src="http://s21.cnzz.com/stat.php?id=2982771&web_id=2982771" language="JavaScript"></script>
+</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="faqs.php">F.A.Qs</a></th>
+		<th><a href="./bbs.php">Web Board</a></th>
+		<th><a href="./">Home</a></th>
+		<th><a href="./problemset.php">ProblemSet</a></th>
+		<th><a href="./status.php">Status</a></th>
+		<th><a href="./ranklist.php">Ranklist</a></th>
+		<th><a href="./contest.php">Contest</a></th>
+		<th><a href=loginpage.php>Login</a></th><th><a href=registerpage.php>Register</a></th>		<th><a href="./donation.php" class="highlight">捐赠本站</a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>祝大家新年快乐！	</div>
+</div>
+</center>
+</div>
+<title>Problem 1007. -- [HNOI2008]水平可见直线</title><center><h2>1007: [HNOI2008]水平可见直线</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>1668&nbsp;&nbsp;<span class=green>Solved: </span>590<br>[<a href='submitpage.php?id=1007'>Submit</a>][<a href='problemstatus.php?id=1007'>Status</a>][<a href='bbs.php?id=1007'>Discuss</a>]</center><h2>Description</h2><div class=content><img border="0" src="images/1007.jpg"> </div><h2>Input</h2><div class=content>第一行为N(0 < N < 50000),接下来的N行输入Ai,Bi
+</div><h2>Output</h2><div class=content>从小到大输出可见直线的编号，两两中间用空格隔开.
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>3<br />
+-1 0<br />
+1 0<br />
+0 0<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1 2</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='problemset.php?search='></a></p></div><center>[<a href='submitpage.php?id=1007'>Submit</a>][<a href='problemstatus.php?id=1007'>Status</a>][<a href='bbs.php?id=1007'>Discuss</a>]</center>﻿<br>
+
+<a href="./"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href=setlang.php?lang=ko>한국어</a>&nbsp;
+		<a href=setlang.php?lang=cn>中文</a>&nbsp;
+		<a href=setlang.php?lang=fa>فارسی</a>&nbsp;
+		<a href=setlang.php?lang=en>English</a>&nbsp;
+		<a href=setlang.php?lang=th>ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2012 大视野在线测评 | <script src="http://s21.cnzz.com/stat.php?id=2982771&web_id=2982771" language="JavaScript"></script>
+</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="faqs.php">F.A.Qs</a></th>
+		<th><a href="./bbs.php">Web Board</a></th>
+		<th><a href="./">Home</a></th>
+		<th><a href="./problemset.php">ProblemSet</a></th>
+		<th><a href="./status.php">Status</a></th>
+		<th><a href="./ranklist.php">Ranklist</a></th>
+		<th><a href="./contest.php">Contest</a></th>
+		<th><a href=loginpage.php>Login</a></th><th><a href=registerpage.php>Register</a></th>		<th><a href="./donation.php" class="highlight">捐赠本站</a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>祝大家新年快乐！	</div>
+</div>
+</center>
+</div>
+<title>Problem 1008. -- [HNOI2008]越狱</title><center><h2>1008: [HNOI2008]越狱</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>2021&nbsp;&nbsp;<span class=green>Solved: </span>871<br>[<a href='submitpage.php?id=1008'>Submit</a>][<a href='problemstatus.php?id=1008'>Status</a>][<a href='bbs.php?id=1008'>Discuss</a>]</center><h2>Description</h2><div class=content><p>监狱有连续编号为1...N的N个房间，每个房间关押一个犯人，有M种宗教，每个犯人可能信仰其中一种。如果相邻房间的犯人的宗教相同，就可能发生越狱，求有多少种状态可能发生越狱</p></div><h2>Input</h2><div class=content><p>输入两个整数M，N.1&lt;=M&lt;=10^8,1&lt;=N&lt;=10^12</p></div><h2>Output</h2><div class=content><p>可能越狱的状态数，模100003取余</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2 3<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>6<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>6种状态为(000)(001)(011)(100)(110)(111)</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='problemset.php?search='></a></p></div><center>[<a href='submitpage.php?id=1008'>Submit</a>][<a href='problemstatus.php?id=1008'>Status</a>][<a href='bbs.php?id=1008'>Discuss</a>]</center>﻿<br>
+
+<a href="./"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href=setlang.php?lang=ko>한국어</a>&nbsp;
+		<a href=setlang.php?lang=cn>中文</a>&nbsp;
+		<a href=setlang.php?lang=fa>فارسی</a>&nbsp;
+		<a href=setlang.php?lang=en>English</a>&nbsp;
+		<a href=setlang.php?lang=th>ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2012 大视野在线测评 | <script src="http://s21.cnzz.com/stat.php?id=2982771&web_id=2982771" language="JavaScript"></script>
+</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="faqs.php">F.A.Qs</a></th>
+		<th><a href="./bbs.php">Web Board</a></th>
+		<th><a href="./">Home</a></th>
+		<th><a href="./problemset.php">ProblemSet</a></th>
+		<th><a href="./status.php">Status</a></th>
+		<th><a href="./ranklist.php">Ranklist</a></th>
+		<th><a href="./contest.php">Contest</a></th>
+		<th><a href=loginpage.php>Login</a></th><th><a href=registerpage.php>Register</a></th>		<th><a href="./donation.php" class="highlight">捐赠本站</a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>祝大家新年快乐！	</div>
+</div>
+</center>
+</div>
+<title>Problem 1009. -- [HNOI2008]GT考试</title><center><h2>1009: [HNOI2008]GT考试</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>856&nbsp;&nbsp;<span class=green>Solved: </span>494<br>[<a href='submitpage.php?id=1009'>Submit</a>][<a href='problemstatus.php?id=1009'>Status</a>][<a href='bbs.php?id=1009'>Discuss</a>]</center><h2>Description</h2><div class=content><p>阿申准备报名参加GT考试，准考证号为N位数X1X2....Xn(0&lt;=Xi&lt;=9),他不希望准考证号上出现不吉利的数字。他的不吉利数学A1A2...Am(0&lt;=Ai&lt;=9)有M位，不出现是指X1X2...Xn中没有恰好一段等于A1A2...Am. A1和X1可以为0</p></div><h2>Input</h2><div class=content><p>第一行输入N,M,K.接下来一行输入M位的数。 100%数据N&lt;=10^9,M&lt;=20,K&lt;=1000 40%数据N&lt;=1000 10%数据N&lt;=6</p></div><h2>Output</h2><div class=content><p>阿申想知道不出现不吉利数字的号码有多少种，输出模K取余的结果.</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 3 100 <br />
+111<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>81</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='problemset.php?search='></a></p></div><center>[<a href='submitpage.php?id=1009'>Submit</a>][<a href='problemstatus.php?id=1009'>Status</a>][<a href='bbs.php?id=1009'>Discuss</a>]</center>﻿<br>
+
+<a href="./"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href=setlang.php?lang=ko>한국어</a>&nbsp;
+		<a href=setlang.php?lang=cn>中文</a>&nbsp;
+		<a href=setlang.php?lang=fa>فارسی</a>&nbsp;
+		<a href=setlang.php?lang=en>English</a>&nbsp;
+		<a href=setlang.php?lang=th>ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2012 大视野在线测评 | <script src="http://s21.cnzz.com/stat.php?id=2982771&web_id=2982771" language="JavaScript"></script>
+</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="faqs.php">F.A.Qs</a></th>
+		<th><a href="./bbs.php">Web Board</a></th>
+		<th><a href="./">Home</a></th>
+		<th><a href="./problemset.php">ProblemSet</a></th>
+		<th><a href="./status.php">Status</a></th>
+		<th><a href="./ranklist.php">Ranklist</a></th>
+		<th><a href="./contest.php">Contest</a></th>
+		<th><a href=loginpage.php>Login</a></th><th><a href=registerpage.php>Register</a></th>		<th><a href="./donation.php" class="highlight">捐赠本站</a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>祝大家新年快乐！	</div>
+</div>
+</center>
+</div>
+<title>Problem 1010. -- [HNOI2008]玩具装箱toy</title><center><h2>1010: [HNOI2008]玩具装箱toy</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>3645&nbsp;&nbsp;<span class=green>Solved: </span>1241<br>[<a href='submitpage.php?id=1010'>Submit</a>][<a href='problemstatus.php?id=1010'>Status</a>][<a href='bbs.php?id=1010'>Discuss</a>]</center><h2>Description</h2><div class=content>P教授要去看奥运，但是他舍不下他的玩具，于是他决定把所有的玩具运到北京。他使用自己的压缩器进行压缩，其可以将任意物品变成一堆，再放到一种特殊的一维容器中。P教授有编号为1...N的N件玩具，第i件玩具经过压缩后变成一维长度为Ci.为了方便整理，P教授要求在一个一维容器中的玩具编号是连续的。同时如果一个一维容器中有多个玩具，那么两件玩具之间要加入一个单位长度的填充物，形式地说如果将第i件玩具到第j个玩具放到一个容器中，那么容器的长度将为
+x=j-i+Sigma(Ck) i<=K<=j
+制作容器的费用与容器的长度有关，根据教授研究，如果容器长度为x,其制作费用为(X-L)^2.其中L是一个
+常量。P教授不关心容器的数目，他可以制作出任意长度的容器，甚至超过L。但他希望费用最小.
+</div><h2>Input</h2><div class=content>第一行输入两个整数N，L.接下来N行输入Ci.1<=N<=50000,1<=L,Ci<=10^7
+</div><h2>Output</h2><div class=content>输出最小费用
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 4<br />
+3<br />
+4<br />
+2<br />
+1<br />
+4<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='problemset.php?search='></a></p></div><center>[<a href='submitpage.php?id=1010'>Submit</a>][<a href='problemstatus.php?id=1010'>Status</a>][<a href='bbs.php?id=1010'>Discuss</a>]</center>﻿<br>
+
+<a href="./"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href=setlang.php?lang=ko>한국어</a>&nbsp;
+		<a href=setlang.php?lang=cn>中文</a>&nbsp;
+		<a href=setlang.php?lang=fa>فارسی</a>&nbsp;
+		<a href=setlang.php?lang=en>English</a>&nbsp;
+		<a href=setlang.php?lang=th>ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2012 大视野在线测评 | <script src="http://s21.cnzz.com/stat.php?id=2982771&web_id=2982771" language="JavaScript"></script>
+</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="faqs.php">F.A.Qs</a></th>
+		<th><a href="./bbs.php">Web Board</a></th>
+		<th><a href="./">Home</a></th>
+		<th><a href="./problemset.php">ProblemSet</a></th>
+		<th><a href="./status.php">Status</a></th>
+		<th><a href="./ranklist.php">Ranklist</a></th>
+		<th><a href="./contest.php">Contest</a></th>
+		<th><a href=loginpage.php>Login</a></th><th><a href=registerpage.php>Register</a></th>		<th><a href="./donation.php" class="highlight">捐赠本站</a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>祝大家新年快乐！	</div>
+</div>
+</center>
+</div>
+<title>Problem 1011. -- [HNOI2008]遥远的行星</title><center><h2>1011: [HNOI2008]遥远的行星</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MBSec&nbsp;&nbsp;<span class=red>Special Judge</span><br><span class=green>Submit: </span>773&nbsp;&nbsp;<span class=green>Solved: </span>228<br>[<a href='submitpage.php?id=1011'>Submit</a>][<a href='problemstatus.php?id=1011'>Status</a>][<a href='bbs.php?id=1011'>Discuss</a>]</center><h2>Description</h2><div class=content><p>直线上N颗行星，X=i处有行星i,行星J受到行星I的作用力，当且仅当i&lt;=AJ.此时J受到作用力的大小为 Fi-&gt;j=Mi*Mj/(j-i) 其中A为很小的常量，故直观上说每颗行星都只受到距离遥远的行星的作用。请计算每颗行星的受力，只要结果的相对误差不超过5%即可.</p></div><h2>Input</h2><div class=content><p>第一行两个整数N和A. 1&lt;=N&lt;=10^5.1</p></div><h2>Output</h2><div class=content><p>N行，依次输出各行星的受力情况</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 0.3<br />
+3<br />
+5<br />
+6<br />
+2<br />
+4<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0.000000<br />
+0.000000<br />
+0.000000<br />
+1.968750<br />
+2.976000<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p><p>精确结果应该为0 0 0 2 3,但样例输出的结果误差不超过5%,也算对</p></p></div><h2>Source</h2>
+			<div class=content><p><a href='problemset.php?search='></a></p></div><center>[<a href='submitpage.php?id=1011'>Submit</a>][<a href='problemstatus.php?id=1011'>Status</a>][<a href='bbs.php?id=1011'>Discuss</a>]</center>﻿<br>
+
+<a href="./"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href=setlang.php?lang=ko>한국어</a>&nbsp;
+		<a href=setlang.php?lang=cn>中文</a>&nbsp;
+		<a href=setlang.php?lang=fa>فارسی</a>&nbsp;
+		<a href=setlang.php?lang=en>English</a>&nbsp;
+		<a href=setlang.php?lang=th>ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2012 大视野在线测评 | <script src="http://s21.cnzz.com/stat.php?id=2982771&web_id=2982771" language="JavaScript"></script>
+</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="faqs.php">F.A.Qs</a></th>
+		<th><a href="./bbs.php">Web Board</a></th>
+		<th><a href="./">Home</a></th>
+		<th><a href="./problemset.php">ProblemSet</a></th>
+		<th><a href="./status.php">Status</a></th>
+		<th><a href="./ranklist.php">Ranklist</a></th>
+		<th><a href="./contest.php">Contest</a></th>
+		<th><a href=loginpage.php>Login</a></th><th><a href=registerpage.php>Register</a></th>		<th><a href="./donation.php" class="highlight">捐赠本站</a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>祝大家新年快乐！	</div>
+</div>
+</center>
+</div>
+<title>Problem 1012. -- [JSOI2008]最大数maxnumber
+</title><center><h2>1012: [JSOI2008]最大数maxnumber
+</h2><span class=green>Time Limit: </span>3 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>1985&nbsp;&nbsp;<span class=green>Solved: </span>910<br>[<a href='submitpage.php?id=1012'>Submit</a>][<a href='problemstatus.php?id=1012'>Status</a>][<a href='bbs.php?id=1012'>Discuss</a>]</center><h2>Description</h2><div class=content>现在请求你维护一个数列，要求提供以下两种操作：
+1、	查询操作。
+语法：Q L
+功能：查询当前数列中末尾L个数中的最大的数，并输出这个数的值。
+限制：L不超过当前数列的长度。
+2、	插入操作。
+语法：A n
+功能：将n加上t，其中t是最近一次查询操作的答案（如果还未执行过查询操作，则t=0)，并将所得结果对一个固定的常数D取模，将所得答案插入到数列的末尾。
+限制：n是非负整数并且在长整范围内。
+注意：初始时数列是空的，没有一个数。
+
+</div><h2>Input</h2><div class=content>第一行两个整数，M和D，其中M表示操作的个数(M <= 200,000)，D如上文中所述，满足(0<D<2,000,000,000)
+接下来的M行，每行一个字符串，描述一个具体的操作。语法如上文所述。
+</div><h2>Output</h2><div class=content>对于每一个查询操作，你应该按照顺序依次输出结果，每个结果占一行。
+
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>5 100<br />
+A 96<br />
+Q 1<br />
+A 97<br />
+Q 1<br />
+Q 2<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>96<br />
+93<br />
+96<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='problemset.php?search='></a></p></div><center>[<a href='submitpage.php?id=1012'>Submit</a>][<a href='problemstatus.php?id=1012'>Status</a>][<a href='bbs.php?id=1012'>Discuss</a>]</center>﻿<br>
+
+<a href="./"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href=setlang.php?lang=ko>한국어</a>&nbsp;
+		<a href=setlang.php?lang=cn>中文</a>&nbsp;
+		<a href=setlang.php?lang=fa>فارسی</a>&nbsp;
+		<a href=setlang.php?lang=en>English</a>&nbsp;
+		<a href=setlang.php?lang=th>ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2012 大视野在线测评 | <script src="http://s21.cnzz.com/stat.php?id=2982771&web_id=2982771" language="JavaScript"></script>
+</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="faqs.php">F.A.Qs</a></th>
+		<th><a href="./bbs.php">Web Board</a></th>
+		<th><a href="./">Home</a></th>
+		<th><a href="./problemset.php">ProblemSet</a></th>
+		<th><a href="./status.php">Status</a></th>
+		<th><a href="./ranklist.php">Ranklist</a></th>
+		<th><a href="./contest.php">Contest</a></th>
+		<th><a href=loginpage.php>Login</a></th><th><a href=registerpage.php>Register</a></th>		<th><a href="./donation.php" class="highlight">捐赠本站</a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>祝大家新年快乐！	</div>
+</div>
+</center>
+</div>
+<title>Problem 1013. -- [JSOI2008]球形空间产生器sphere</title><center><h2>1013: [JSOI2008]球形空间产生器sphere</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>958&nbsp;&nbsp;<span class=green>Solved: </span>556<br>[<a href='submitpage.php?id=1013'>Submit</a>][<a href='problemstatus.php?id=1013'>Status</a>][<a href='bbs.php?id=1013'>Discuss</a>]</center><h2>Description</h2><div class=content>有一个球形空间产生器能够在n维空间中产生一个坚硬的球体。现在，你被困在了这个n维球体中，你只知道球面上n+1个点的坐标，你需要以最快的速度确定这个n维球体的球心坐标，以便于摧毁这个球形空间产生器。
+
+</div><h2>Input</h2><div class=content>第一行是一个整数，n。
+接下来的n+1行，每行有n个实数，表示球面上一点的n维坐标。每一个实数精确到小数点后6位，且其绝对值都不超过20000。
+</div><h2>Output</h2><div class=content>有且只有一行，依次给出球心的n维坐标（n个实数），两个实数之间用一个空格隔开。每个实数精确到小数点后3位。数据保证有解。你的答案必须和标准输出一模一样才能够得分。
+
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+0.0 0.0<br />
+-1.0 1.0<br />
+1.0 0.0<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>0.500 1.500<br />
+<br />
+数据规模：<br />
+对于40%的数据，1<=n<=3<br />
+对于100%的数据，1<=n<=10<br />
+提示：给出两个定义：<br />
+1、	球心：到球面上任意一点距离都相等的点。<br />
+2、	距离：设两个n为空间上的点A, B的坐标为(a1, a2, …, an), (b1, b2, …, bn)，则AB的距离定义为：dist = sqrt( (a1-b1)^2 + (a2-b2)^2 + … + (an-bn)^2 )<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='problemset.php?search='></a></p></div><center>[<a href='submitpage.php?id=1013'>Submit</a>][<a href='problemstatus.php?id=1013'>Status</a>][<a href='bbs.php?id=1013'>Discuss</a>]</center>﻿<br>
+
+<a href="./"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href=setlang.php?lang=ko>한국어</a>&nbsp;
+		<a href=setlang.php?lang=cn>中文</a>&nbsp;
+		<a href=setlang.php?lang=fa>فارسی</a>&nbsp;
+		<a href=setlang.php?lang=en>English</a>&nbsp;
+		<a href=setlang.php?lang=th>ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2012 大视野在线测评 | <script src="http://s21.cnzz.com/stat.php?id=2982771&web_id=2982771" language="JavaScript"></script>
+</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="faqs.php">F.A.Qs</a></th>
+		<th><a href="./bbs.php">Web Board</a></th>
+		<th><a href="./">Home</a></th>
+		<th><a href="./problemset.php">ProblemSet</a></th>
+		<th><a href="./status.php">Status</a></th>
+		<th><a href="./ranklist.php">Ranklist</a></th>
+		<th><a href="./contest.php">Contest</a></th>
+		<th><a href=loginpage.php>Login</a></th><th><a href=registerpage.php>Register</a></th>		<th><a href="./donation.php" class="highlight">捐赠本站</a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>祝大家新年快乐！	</div>
+</div>
+</center>
+</div>
+<title>Problem 1014. -- [JSOI2008]火星人prefix</title><center><h2>1014: [JSOI2008]火星人prefix</h2><span class=green>Time Limit: </span>10 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>1486&nbsp;&nbsp;<span class=green>Solved: </span>403<br>[<a href='submitpage.php?id=1014'>Submit</a>][<a href='problemstatus.php?id=1014'>Status</a>][<a href='bbs.php?id=1014'>Discuss</a>]</center><h2>Description</h2><div class=content>火星人最近研究了一种操作：求一个字串两个后缀的公共前缀。比方说，有这样一个字符串：madamimadam，我们将这个字符串的各个字符予以标号：
+序号：	1	2	3	4	5	6	7	8	9	10	11
+字符	m	a	d	a	m	i	m	a	d	a	m
+ 现在，火星人定义了一个函数LCQ(x, y)，表示：该字符串中第x个字符开始的字串，与该字符串中第y个字符开始的字串，两个字串的公共前缀的长度。比方说，LCQ(1, 7) = 5, LCQ(2, 10) = 1, LCQ(4, 7) = 0
+  在研究LCQ函数的过程中，火星人发现了这样的一个关联：如果把该字符串的所有后缀排好序，就可以很快地求出LCQ函数的值；同样，如果求出了LCQ函数的值，也可以很快地将该字符串的后缀排好序。
+  尽管火星人聪明地找到了求取LCQ函数的快速算法，但不甘心认输的地球人又给火星人出了个难题：在求取LCQ函数的同时，还可以改变字符串本身。具体地说，可以更改字符串中某一个字符的值，也可以在字符串中的某一个位置插入一个字符。地球人想考验一下，在如此复杂的问题中，火星人是否还能够做到很快地求取LCQ函数的值。
+
+</div><h2>Input</h2><div class=content><p>第一行给出初始的字符串。第二行是一个非负整数M，表示操作的个数。接下来的M行，每行描述一个操作。操作有3种，如下所示： 1、 询问。语法：Q x y，x, y均为正整数。功能：计算LCQ(x, y) 限制：1 &lt;= x, y &lt;= 当前字符串长度。 2、 修改。语法：R x d，x是正整数，d是字符。功能：将字符串中第x个数修改为字符d。限制：x不超过当前字符串长度。 3、 插入：语法：I x d，x是非负整数，d是字符。功能：在字符串第x个字符之后插入字符d，如果x = 0，则在字符串开头插入。限制：x不超过当前字符串长度。</p></div><h2>Output</h2><div class=content>对于输入文件中每一个询问操作，你都应该输出对应的答案。一个答案一行。
+
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>7<br />
+Q 1 7<br />
+Q 4 8<br />
+Q 10 11<br />
+R 3 a<br />
+Q 1 7<br />
+I 10 a<br />
+Q 2 11<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>5<br />
+1<br />
+0<br />
+2<br />
+1<br />
+数据规模：<br />
+对于100%的数据，满足：<br />
+1、	所有字符串自始至终都只有小写字母构成。<br />
+2、	M <= 150,000<br />
+3、	字符串长度L自始至终都满足L <= 100,000<br />
+4、	询问操作的个数不超过10,000个。<br />
+<br />
+对于第1，2个数据，字符串长度自始至终都不超过1,000<br />
+对于第3，4，5个数据，没有插入操作。<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='problemset.php?search='></a></p></div><center>[<a href='submitpage.php?id=1014'>Submit</a>][<a href='problemstatus.php?id=1014'>Status</a>][<a href='bbs.php?id=1014'>Discuss</a>]</center>﻿<br>
+
+<a href="./"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href=setlang.php?lang=ko>한국어</a>&nbsp;
+		<a href=setlang.php?lang=cn>中文</a>&nbsp;
+		<a href=setlang.php?lang=fa>فارسی</a>&nbsp;
+		<a href=setlang.php?lang=en>English</a>&nbsp;
+		<a href=setlang.php?lang=th>ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2012 大视野在线测评 | <script src="http://s21.cnzz.com/stat.php?id=2982771&web_id=2982771" language="JavaScript"></script>
+</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="faqs.php">F.A.Qs</a></th>
+		<th><a href="./bbs.php">Web Board</a></th>
+		<th><a href="./">Home</a></th>
+		<th><a href="./problemset.php">ProblemSet</a></th>
+		<th><a href="./status.php">Status</a></th>
+		<th><a href="./ranklist.php">Ranklist</a></th>
+		<th><a href="./contest.php">Contest</a></th>
+		<th><a href=loginpage.php>Login</a></th><th><a href=registerpage.php>Register</a></th>		<th><a href="./donation.php" class="highlight">捐赠本站</a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>祝大家新年快乐！	</div>
+</div>
+</center>
+</div>
+<title>Problem 1015. -- [JSOI2008]星球大战starwar</title><center><h2>1015: [JSOI2008]星球大战starwar</h2><span class=green>Time Limit: </span>3 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>1485&nbsp;&nbsp;<span class=green>Solved: </span>607<br>[<a href='submitpage.php?id=1015'>Submit</a>][<a href='problemstatus.php?id=1015'>Status</a>][<a href='bbs.php?id=1015'>Discuss</a>]</center><h2>Description</h2><div class=content><p>很久以前，在一个遥远的星系，一个黑暗的帝国靠着它的超级武器统治者整个星系。某一天，凭着一个偶然的机遇，一支反抗军摧毁了帝国的超级武器，并攻下了星系中几乎所有的星球。这些星球通过特殊的以太隧道互相直接或间接地连接。 但好景不长，很快帝国又重新造出了他的超级武器。凭借这超级武器的力量，帝国开始有计划地摧毁反抗军占领的星球。由于星球的不断被摧毁，两个星球之间的通讯通道也开始不可靠起来。现在，反抗军首领交给你一个任务：给出原来两个星球之间的以太隧道连通情况以及帝国打击的星球顺序，以尽量快的速度求出每一次打击之后反抗军占据的星球的连通快的个数。（如果两个星球可以通过现存的以太通道直接或间接地连通，则这两个星球在同一个连通块中）。</p></div><h2>Input</h2><div class=content><p>输入文件第一行包含两个整数，N (1 &lt;= N &lt;= 2M) 和M (1 &lt;= M &lt;= 200,000)，分别表示星球的数目和以太隧道的数目。星球用0~N-1的整数编号。接下来的M行，每行包括两个整数X, Y，其中（0&lt;=X&lt;&gt;Y</p></div><h2>Output</h2><div class=content><p>输出文件的第一行是开始时星球的连通块个数。接下来的N行，每行一个整数，表示经过该次打击后现存星球的连通块个数。</p></div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>8 13<br />
+0 1<br />
+1 6<br />
+6 5<br />
+5 0<br />
+0 6<br />
+1 2<br />
+2 3<br />
+3 4<br />
+4 5<br />
+7 1<br />
+7 2<br />
+7 6<br />
+3 6<br />
+5<br />
+1<br />
+6<br />
+3<br />
+5<br />
+7<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>1<br />
+1<br />
+1<br />
+2<br />
+3<br />
+3<br />
+<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='problemset.php?search='></a></p></div><center>[<a href='submitpage.php?id=1015'>Submit</a>][<a href='problemstatus.php?id=1015'>Status</a>][<a href='bbs.php?id=1015'>Discuss</a>]</center>﻿<br>
+
+<a href="./"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href=setlang.php?lang=ko>한국어</a>&nbsp;
+		<a href=setlang.php?lang=cn>中文</a>&nbsp;
+		<a href=setlang.php?lang=fa>فارسی</a>&nbsp;
+		<a href=setlang.php?lang=en>English</a>&nbsp;
+		<a href=setlang.php?lang=th>ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2012 大视野在线测评 | <script src="http://s21.cnzz.com/stat.php?id=2982771&web_id=2982771" language="JavaScript"></script>
+</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="faqs.php">F.A.Qs</a></th>
+		<th><a href="./bbs.php">Web Board</a></th>
+		<th><a href="./">Home</a></th>
+		<th><a href="./problemset.php">ProblemSet</a></th>
+		<th><a href="./status.php">Status</a></th>
+		<th><a href="./ranklist.php">Ranklist</a></th>
+		<th><a href="./contest.php">Contest</a></th>
+		<th><a href=loginpage.php>Login</a></th><th><a href=registerpage.php>Register</a></th>		<th><a href="./donation.php" class="highlight">捐赠本站</a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>祝大家新年快乐！	</div>
+</div>
+</center>
+</div>
+<title>Problem 1016. -- [JSOI2008]最小生成树计数</title><center><h2>1016: [JSOI2008]最小生成树计数</h2><span class=green>Time Limit: </span>1 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>1583&nbsp;&nbsp;<span class=green>Solved: </span>604<br>[<a href='submitpage.php?id=1016'>Submit</a>][<a href='problemstatus.php?id=1016'>Status</a>][<a href='bbs.php?id=1016'>Discuss</a>]</center><h2>Description</h2><div class=content>现在给出了一个简单无向加权图。你不满足于求出这个图的最小生成树，而希望知道这个图中有多少个不同的最小生成树。（如果两颗最小生成树中至少有一条边不同，则这两个最小生成树就是不同的）。由于不同的最小生成树可能很多，所以你只需要输出方案数对31011的模就可以了。
+
+</div><h2>Input</h2><div class=content>第一行包含两个数，n和m，其中1<=n<=100; 1<=m<=1000; 表示该无向图的节点数和边数。每个节点用1~n的整数编号。
+接下来的m行，每行包含两个整数：a, b, c，表示节点a, b之间的边的权值为c，其中1<=c<=1,000,000,000。数据保证不会出现自回边和重边。
+注意：具有相同权值的边不会超过10条。
+</div><h2>Output</h2><div class=content>输出不同的最小生成树有多少个。你只需要输出数量对31011的模就可以了。
+
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>4 6<br />
+1 2 1<br />
+1 3 1<br />
+1 4 1<br />
+2 3 2<br />
+2 4 1<br />
+3 4 1<br />
+<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>8<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='problemset.php?search='></a></p></div><center>[<a href='submitpage.php?id=1016'>Submit</a>][<a href='problemstatus.php?id=1016'>Status</a>][<a href='bbs.php?id=1016'>Discuss</a>]</center>﻿<br>
+
+<a href="./"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href=setlang.php?lang=ko>한국어</a>&nbsp;
+		<a href=setlang.php?lang=cn>中文</a>&nbsp;
+		<a href=setlang.php?lang=fa>فارسی</a>&nbsp;
+		<a href=setlang.php?lang=en>English</a>&nbsp;
+		<a href=setlang.php?lang=th>ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2012 大视野在线测评 | <script src="http://s21.cnzz.com/stat.php?id=2982771&web_id=2982771" language="JavaScript"></script>
+</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="faqs.php">F.A.Qs</a></th>
+		<th><a href="./bbs.php">Web Board</a></th>
+		<th><a href="./">Home</a></th>
+		<th><a href="./problemset.php">ProblemSet</a></th>
+		<th><a href="./status.php">Status</a></th>
+		<th><a href="./ranklist.php">Ranklist</a></th>
+		<th><a href="./contest.php">Contest</a></th>
+		<th><a href=loginpage.php>Login</a></th><th><a href=registerpage.php>Register</a></th>		<th><a href="./donation.php" class="highlight">捐赠本站</a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>祝大家新年快乐！	</div>
+</div>
+</center>
+</div>
+<title>Problem 1017. -- [JSOI2008]魔兽地图DotR
+</title><center><h2>1017: [JSOI2008]魔兽地图DotR
+</h2><span class=green>Time Limit: </span>30 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>419&nbsp;&nbsp;<span class=green>Solved: </span>154<br>[<a href='submitpage.php?id=1017'>Submit</a>][<a href='problemstatus.php?id=1017'>Status</a>][<a href='bbs.php?id=1017'>Discuss</a>]</center><h2>Description</h2><div class=content>DotR (Defense of the Robots) Allstars是一个风靡全球的魔兽地图，他的规则简单与同样流行的地图DotA (Defense of the Ancients) Allstars。DotR里面的英雄只有一个属性——力量。他们需要购买装备来提升自己的力量值，每件装备都可以使佩戴它的英雄的力量值提高固定的点数，所以英雄的力量值等于它购买的所有装备的力量值之和。
+装备分为基本装备和高级装备两种。基本装备可以直接从商店里面用金币购买，而高级装备需要用基本装备或者较低级的高级装备来合成，合成不需要附加的金币。装备的合成路线可以用一棵树来表示。比如，Sange and Yasha的合成需要Sange, Yasha和Sange and Yasha Recipe Scroll三样物品。其中Sange又要用Ogre Axe, Belt of Giant Strength 和 Sange Recipe Scroll合成。
+每件基本装备都有数量限制，这限制了你不能无限制地合成某些性价比很高的装备。
+现在，英雄Spectre有M个金币，他想用这些钱购买装备使自己的力量值尽量高。你能帮帮他吗？他会教你魔法Haunt（幽灵附体）作为回报的。
+
+</div><h2>Input</h2><div class=content>输入文件第一行包含两个整数，N (1 <= n <= 51) 和 m (0 <= m <= 2,000)。分别表示装备的种类数和金币数。装备用1到N的整数编号。接下来的N行，按照装备1到装备n的顺序，每行描述一种装备。每一行的第一个正整数表示这个装备贡献的力量值。接下来的非空字符表示这种装备是基本装备还是高级装备，A表示高级装备，B表示基本装备。如果是基本装备，紧接着的两个正整数分别表示它的单价（单位为金币）和数量限制（不超过100）。如果是高级装备，后面紧跟着一个正整数C，表示这个高级装备需要C种低级装备。后面的2C个数，依次描述某个低级装备的种类和需要的个数。
+
+</div><h2>Output</h2><div class=content>第一行包含一个整数S，表示最多可以提升多少点力量值。
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>10 59<br />
+5 A 3 6 1 9 2 10 1<br />
+1 B 5 3<br />
+1 B 4 3<br />
+1 B 2 3<br />
+8 A 3 2 1 3 1 7 1<br />
+1 B 5 3<br />
+5 B 3 3<br />
+15 A 3 1 1 5 1 4 1<br />
+1 B 3 5<br />
+1 B 4 3<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>33<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p></p></div><h2>Source</h2>
+			<div class=content><p><a href='problemset.php?search='></a></p></div><center>[<a href='submitpage.php?id=1017'>Submit</a>][<a href='problemstatus.php?id=1017'>Status</a>][<a href='bbs.php?id=1017'>Discuss</a>]</center>﻿<br>
+
+<a href="./"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href=setlang.php?lang=ko>한국어</a>&nbsp;
+		<a href=setlang.php?lang=cn>中文</a>&nbsp;
+		<a href=setlang.php?lang=fa>فارسی</a>&nbsp;
+		<a href=setlang.php?lang=en>English</a>&nbsp;
+		<a href=setlang.php?lang=th>ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2012 大视野在线测评 | <script src="http://s21.cnzz.com/stat.php?id=2982771&web_id=2982771" language="JavaScript"></script>
+</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel=stylesheet href='include/hoj.css' type='text/css'>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/logo.png"/>
+</div>
+<table width=96%> 
+	<tr align="center" class='hd' valign="top">
+				<th><a href="faqs.php">F.A.Qs</a></th>
+		<th><a href="./bbs.php">Web Board</a></th>
+		<th><a href="./">Home</a></th>
+		<th><a href="./problemset.php">ProblemSet</a></th>
+		<th><a href="./status.php">Status</a></th>
+		<th><a href="./ranklist.php">Ranklist</a></th>
+		<th><a href="./contest.php">Contest</a></th>
+		<th><a href=loginpage.php>Login</a></th><th><a href=registerpage.php>Register</a></th>		<th><a href="./donation.php" class="highlight">捐赠本站</a></th>
+	</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+	<div>
+		<B>Notice:</B>祝大家新年快乐！	</div>
+</div>
+</center>
+</div>
+<title>Problem 1018. -- [SHOI2008]堵塞的交通traffic</title><center><h2>1018: [SHOI2008]堵塞的交通traffic</h2><span class=green>Time Limit: </span>3 Sec&nbsp;&nbsp;<span class=green>Memory Limit: </span>162 MB<br><span class=green>Submit: </span>745&nbsp;&nbsp;<span class=green>Solved: </span>199<br>[<a href='submitpage.php?id=1018'>Submit</a>][<a href='problemstatus.php?id=1018'>Status</a>][<a href='bbs.php?id=1018'>Discuss</a>]</center><h2>Description</h2><div class=content>有一天，由于某种穿越现象作用，你来到了传说中的小人国。小人国的布局非常奇特，整个国家的交通系统可以被看成是一个2行C列的矩形网格，网格上的每个点代表一个城市，相邻的城市之间有一条道路，所以总共有2C个城市和3C-2条道路。 
+小人国的交通状况非常槽糕。有的时候由于交通堵塞，两座城市之间的道路会变得不连通，直到拥堵解决，道路才会恢复畅通。初来咋到的你决心毛遂自荐到交通部某份差事，部长听说你来自一个科技高度发达的世界，喜出望外地要求你编写一个查询应答系统，以挽救已经病入膏肓的小人国交通系统。 
+小人国的交通部将提供一些交通信息给你，你的任务是根据当前的交通情况回答查询的问题。交通信息可以分为以下几种格式： 
+Close r1 c1 r2 c2：相邻的两座城市(r1,c1)和(r2,c2)之间的道路被堵塞了； 
+Open r1 c1 r2 c2：相邻的两座城市(r1,c1)和(r2,c2)之间的道路被疏通了； 
+Ask r1 c1 r2 c2：询问城市(r1,c1)和(r2,c2)是否连通。如果存在一条路径使得这两条城市连通，则返回Y，否则返回N； 
+</div><h2>Input</h2><div class=content>第一行只有一个整数C，表示网格的列数。接下来若干行，每行为一条交通信息，以单独的一行“Exit”作为结束。我们假设在一开始所有的道路都是堵塞的。 
+对30%测试数据，我们保证C小于等于1000，信息条数小于等于1000； 
+对100%测试数据，我们保证 C小于等于100000，信息条数小于等于100000。 
+</div><h2>Output</h2><div class=content>对于每个查询，输出一个“Y”或“N”。 
+</div><h2>Sample Input</h2>
+			<div class=content><span class=sampledata>2<br />
+Open 1 1 1 2<br />
+Open 1 2 2 2<br />
+Ask 1 1 2 2<br />
+Ask 2 1 2 2<br />
+Exit<br />
+<br />
+<br />
+</span></div><h2>Sample Output</h2>
+			<div class=content><span class=sampledata>Y<br />
+N<br />
+</span></div><h2>HINT</h2>
+			<div class=content><p>1018-1020这三个题,也是JSOI2008的试题.那一年两个省联合比赛.</p></div><h2>Source</h2>
+			<div class=content><p><a href='problemset.php?search='></a></p></div><center>[<a href='submitpage.php?id=1018'>Submit</a>][<a href='problemstatus.php?id=1018'>Status</a>][<a href='bbs.php?id=1018'>Discuss</a>]</center>﻿<br>
+
+<a href="./"><span class=red>HOME</span></a>
+<a href="javascript:history.go(-1)"><span class=red>Back</span></a>
+
+<hr>
+<center>
+	<div class="footer">
+			<a href=setlang.php?lang=ko>한국어</a>&nbsp;
+		<a href=setlang.php?lang=cn>中文</a>&nbsp;
+		<a href=setlang.php?lang=fa>فارسی</a>&nbsp;
+		<a href=setlang.php?lang=en>English</a>&nbsp;
+		<a href=setlang.php?lang=th>ไทย</a>
+	<br>		<div>版权所有 &copy;2008-2012 大视野在线测评 | <script src="http://s21.cnzz.com/stat.php?id=2982771&web_id=2982771" language="JavaScript"></script>
+</div>
+		<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+	</div>
+</center>
+</body>
+</html>
