@@ -9,7 +9,7 @@
 const int maxn = 100002;
 int l, t, o;
 
-static struct {
+static struct T{
   int left;
   int right;
   int mark;
@@ -72,6 +72,9 @@ int query(int left, int right, int root) {
     tree[root*2].mark = tree[root].mark;
     tree[root*2+1].mark = tree[root].mark;
     tree[root].mark = 0;
+  }
+  if (tree[root*2].mark == tree[root*2+1].mark and tree[root].mark == 0) {
+    tree[root].mark = tree[root*2].mark;
   }
   return query(left, right, root*2) | query(left, right, root*2+1);
 }
