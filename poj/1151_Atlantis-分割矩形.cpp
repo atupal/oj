@@ -1,3 +1,8 @@
+/*
+   http://blog.csdn.net/sdj222555/article/details/7234970
+   这道题由于数据量很小，所以可以按照将输入的坐标排序的方法进行分割矩形
+   暴力
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
