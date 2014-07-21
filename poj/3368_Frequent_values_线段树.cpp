@@ -75,7 +75,9 @@ void update(int root) {
     tree[root].lbd = tree[lson].len + tree[rson].lbd;
   }
   if (tree[rson].rbd == tree[rson].len and tree[rson].rval == tree[lson].rval) {
-    tree[root].rbd = tree[rson].len = tree[lson].rbd;
+    // 艹艹艹，把 + 号写成等号了。。。调试几天了，改了就 1a 了，艹.
+    //tree[root].rbd = tree[rson].len = tree[lson].rbd;
+    tree[root].rbd = tree[rson].len + tree[lson].rbd;
   }
   if (tree[lson].rval == tree[rson].lval and tree[lson].rbd + tree[rson].lbd > tree[root].maxbd) {
     tree[root].maxbd = tree[lson].rbd + tree[rson].lbd;
@@ -108,8 +110,8 @@ int query(int root, int left, int right) {
   int lbd = query(lson, left, right);
   int rbd = query(rson, left, right);
   int mbd = 0;
+  int l, r;
   if (tree[lson].rval == tree[rson].lval) {
-    int l, r;
     l = max(left, tree[lson].right - tree[lson].rbd + 1);
     r = min(right, tree[rson].left + tree[rson].lbd - 1);
     mbd = r - l + 1;
