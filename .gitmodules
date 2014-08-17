@@ -1,0 +1,3 @@
+[submodule "codeforces"]
+	path = codeforces
+	url = git@github.com:atupal/codeforces.git
