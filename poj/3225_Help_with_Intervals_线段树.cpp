@@ -17,7 +17,6 @@ static struct {
     int rbd;
     int cover;
     int mask;
-    int flag;
 } tree[maxn*4+11];
 
 void build(int root, int left, int right) {
@@ -25,7 +24,6 @@ void build(int root, int left, int right) {
     tree[root].right = right;
     tree[root].cover = 0;
     tree[root].mask = 0;
-    tree[root].flag = 1;
     tree[root].lbd = left-1;
     tree[root].rbd = right+1;
     if (left >= right) {
@@ -58,47 +56,36 @@ void push_down(int root) {
       tree[rson].lbd = tree[rson].right;
       tree[rson].rbd = tree[rson].left;
     } else {
-      tree[lson].lbd = -1; 
-      tree[lson].rbd = -1; 
-      tree[rson].lbd = -1; 
-      tree[rson].rbd = -1; 
+      tree[lson].lbd = tree[lson].left - 1;
+      tree[lson].rbd = tree[lson].right + 1;
+      tree[rson].lbd = tree[rson].left - 1; 
+      tree[rson].rbd = tree[rson].right + 1;
     }
-    tree[lson].flag = 1;
-    tree[rson].flag = 1;
     tree[root].mask = 0;
   }
 }
 
 void update(int root) {
-  if (tree[lson].cover == tree[rson].cover and tree[lson].flag and tree[rson].flag) {
-    tree[root].cover = tree[lson].cover;
-    tree[root].flag = 1;
-  } else {
-    tree[root].flag = 0;
-  }
-
   tree[root].lbd = tree[lson].lbd;
-  if (tree[rson].lbd != -1 and tree[lson].lbd == tree[lson].right) {
+  if (tree[lson].lbd == tree[lson].right) {
     tree[root].lbd = tree[rson].lbd;
   }
   tree[root].rbd = tree[rson].rbd;
-  if (tree[lson].rbd != -1 and tree[rson].rbd == tree[rson].left) {
+  if (tree[rson].rbd == tree[rson].left) {
     tree[root].rbd = tree[lson].rbd;
   }
 }
 
 void insert(int root, int left, int right, int c) {
-  tree[root].flag = 0;
   if (left <= tree[root].left and tree[root].right <= right) {
     line(tree[root].cover);
     tree[root].mask = c;
-    tree[root].flag = 1;
     if (tree[root].cover) {
       tree[root].lbd = tree[root].right;
       tree[root].rbd = tree[root].left;
     } else {
-      tree[root].lbd = -1;
-      tree[root].rbd = -1;
+      tree[root].lbd = tree[root].left - 1;
+      tree[root].rbd = tree[root].right + 1;
     }
     return;
   } else if (left > tree[root].right or right < tree[root].left) {
@@ -130,14 +117,15 @@ void S(int root, int left, int right) {
   insert(root, left, right, 2);
 }
 
-void query(int root) {
+void query(int root, int left, int right) {
   if (tree[root].left == tree[root].right) {
     return;
   }
+  if (tree[root].)
   query(lson);
-
-  l = tree[lson].rbd;
-
+  if (tree[lson].rbd <= tree[rson].lbd) {
+    printf("(%d, %d) ", tree[lson].rbd, tree[rson].lbd);
+  }
   query(rson);
 }
 
@@ -150,7 +138,7 @@ void solve() {
         //printf("%c %c%d,%d%c\n", order, l, a,b,r);
         f[(int)order](1, (a<<1)+(l=='('), (b<<1)-(r==')'));
     }
-    query(1);
+    query(1, -1, maxn+1);
 }
 
 int main() {
