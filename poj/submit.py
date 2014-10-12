@@ -42,7 +42,7 @@ def colorful_print(text, color='red'):
   color_dict = {
       'red': '\033[31m',
       }
-  print color_dict['color']+text+'\033[0m'
+  print color_dict[color]+text+'\033[0m',
 
 while 1:
   try:
@@ -50,8 +50,16 @@ while 1:
     soup = BeautifulSoup(r.text)
     os.system('cls')
     for tr in soup('tr')[1:13]:
+      flag = 0
       for td in tr('td'):
-        print td.text,
+        if user in td.text:
+          flag = 1
+          break
+      for td in tr('td'):
+        if flag:
+          colorful_print(td.text)
+        else:
+          print td.text,
       print
     print '-' * 100
     time.sleep(1)
