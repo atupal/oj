@@ -1,42 +1,49 @@
 #!/usr/bin/env python2
 
 import requests
+import sys
+import os
+import time
+
+from bs4 import BeautifulSoup
 
 s = requests.Session()
-
-user = 'atupal'
-password = ''
-
-data = {
-    'user_id1': user,
-    'password1': password,
-    'B1': 'login',
-    'url': '/',
-    }
-
-r = s.post('http://poj.org/login', data=data, allow_redirects=0)
-
+try:
+  with open('./user') as fi:
+    user = fi.readline().strip()
+    password= fi.readline().strip()
+except:
+  user = 'atupal'
+  password = ''
 
 proxy_password = ''
 http_proxy = {
     'http': 'http://atupal:%s@j10.jayproxy.org:3000' % proxy_password
     }
 
-import sys
-
-with open(sys.argv[1]) as fi:
+def login():
   data = {
-      'problem_id': sys.argv[1].split('_')[0],
-      'language': '4',
-      'source': fi.read(),
-      'submit': 'Submit'
-  }
+      'user_id1': user,
+      'password1': password,
+      'B1': 'login',
+      'url': '/',
+      }
+  
+  r = s.post('http://poj.org/login', data=data, allow_redirects=0)
 
-s.post('http://poj.org/submit', proxies=http_proxy, data=data)
 
-from bs4 import BeautifulSoup
-import os
-import time
+
+def submit_code():
+  with open(sys.argv[1]) as fi:
+    data = {
+        'problem_id': sys.argv[1].split('_')[0],
+        'language': '4',
+        'source': fi.read(),
+        'submit': 'Submit'
+    }
+  
+  s.post('http://poj.org/submit', proxies=http_proxy, data=data)
+
 
 def colorful_print(text, color='red'):
   color_dict = {
@@ -44,25 +51,41 @@ def colorful_print(text, color='red'):
       }
   print color_dict[color]+text+'\033[0m',
 
-while 1:
-  try:
-    r = s.get('http://poj.org/status')
-    soup = BeautifulSoup(r.text)
-    os.system('cls')
-    for tr in soup('tr')[1:13]:
-      flag = 0
-      for td in tr('td'):
-        if user in td.text:
-          flag = 1
-          break
-      for td in tr('td'):
-        if flag:
-          colorful_print(td.text)
-        else:
-          print td.text,
-      print
-    print '-' * 100
-    time.sleep(1)
-  except KeyboardInterrupt:
-    exit(0)
 
+def fetch_result():
+  while 1:
+    try:
+      r = s.get('http://poj.org/status')
+      soup = BeautifulSoup(r.text)
+      os.system('cls')
+      time.sleep(0.2)
+      for tr in soup('tr')[1:13]:
+        flag = 0
+        for td in tr('td'):
+          if user in td.text:
+            flag = 1
+            break
+          elif 'BoardHome' in td.text:
+            flag = 2
+            break
+        if flag == 2:
+          continue
+        for td in tr('td'):
+          if flag:
+            colorful_print(td.text)
+          else:
+            print td.text,
+        print
+      print '-' * 100
+      time.sleep(1)
+    except KeyboardInterrupt:
+      exit(0)
+
+def main():
+  if len(sys.argv) > 1 and sys.argv[1].lower() != 'status':
+    login()
+    submit_code()
+  fetch_result()
+
+if __name__ == '__main__':
+  main()
