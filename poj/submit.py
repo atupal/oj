@@ -13,6 +13,7 @@ try:
     user = fi.readline().strip()
     password= fi.readline().strip()
 except:
+  print 'read user file failed, use default username, password'
   user = 'atupal'
   password = ''
 
@@ -30,6 +31,7 @@ def login():
       }
   
   r = s.post('http://poj.org/login', data=data, allow_redirects=0)
+  print r
 
 
 
@@ -42,7 +44,8 @@ def submit_code():
         'submit': 'Submit'
     }
   
-  s.post('http://poj.org/submit', proxies=http_proxy, data=data)
+  r = s.post('http://poj.org/submit', proxies=http_proxy, data=data)
+  print r
 
 
 def colorful_print(text, color='red'):
