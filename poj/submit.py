@@ -1,4 +1,13 @@
 #!/usr/bin/env python2
+"""
+    submit.py
+    ~~~~~~~~~
+
+    submit code to poj
+    usage:
+      ./submit.py file_name
+    file_name format: probmenId_xxx.c/cpp
+"""
 
 import requests
 import sys
