@@ -53,7 +53,8 @@ def submit_code():
         'submit': 'Submit'
     }
   
-  r = s.post('http://poj.org/submit', proxies=http_proxy, data=data)
+  #r = s.post('http://poj.org/submit', proxies=http_proxy, data=data)
+  r = s.post('http://poj.org/submit', data=data)
   print r
 
 
