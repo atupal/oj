@@ -6,7 +6,7 @@ const int maxn = 110;
 const int maxm = 5e5+10;
 int n, m;
 
-typedef long long int64; 
+typedef long long int64;
 
 int a[maxn][maxm];
 int b[maxn][maxm];
@@ -14,13 +14,25 @@ int64 dp[maxm];
 int64 pre[maxm];
 
 inline
-int min(int a, int b) {
+int64 min(int64 a, int64 b) {
   return a < b ? a : b;
 }
 
 inline
-int max(int a, int b) {
+int64 max(int64 a, int64 b) {
   return a > b ? a : b;
+}
+
+int64 memo[maxm], ans;
+int64 dfs(int i, int j, int64 sum) {
+  if ( memo[(i-1)*n+m-1] != -1) return memo[i*n+m];
+  if (sum >= ans) return memo[(i-1)*n+m-1] = 9223372036854775807L;
+  int64 ret = 9223372036854775807L;
+  for (int x = 1; x <= m; ++ x) {
+    ret = min( dfs(i-1, x, sum + (int64)max(0, a[i][j]-b[i-1][x]) ), ret);
+  }
+  if (i == n) ans = min(ans, ret);
+  return memo[(i-1)*n+m-1] = ret;
 }
 
 void solve() {
@@ -76,6 +88,13 @@ int main() {
       }
     }
     solve();
+    //memset(memo, -1, sizeof(memo));
+    //ans = 9223372036854775807L;
+    //for (int i = 0; i < m; ++ i) 
+    //  memo[i] = 0;
+    //for (int i = 1; i <= m; ++ i)
+    //  dfs(n, i, 0L);
+    //printf("%lld\n", ans);
   }
 
   return 0;

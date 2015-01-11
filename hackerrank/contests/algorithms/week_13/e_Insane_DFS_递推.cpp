@@ -28,9 +28,7 @@ void test() {
 }
 
 typedef long long int64;
-const int MAX = 200;
 const int64 MOD = 1e9+7;
-int64 memo[maxn][MAX+10];
 
 inline
 void add(int64 &a, int64 b) {
@@ -38,6 +36,8 @@ void add(int64 &a, int64 b) {
   a %= MOD;
 }
 
+/*
+int64 memo[maxn][200+10];
 inline
 int64 dp(int pos, int val) {
   if (val < 0) {
@@ -62,32 +62,57 @@ int64 dp(int pos, int val) {
 
   return ret;
 }
+*/
+
+int MAX;
+
+
+int64 pre[maxn];
+int64 now[maxn];
 
 void solve() {
-  memset(memo, -1, sizeof(memo));
-  for (int i = 0; i < MAX+10; ++ i) {
-    memo[1][i] = 0;
-  }
-  memo[1][0] = 1;
+  //memset(memo, -1, sizeof(memo));
+  memset(pre, 0, sizeof(pre));
+  //for (int i = 0; i < maxn; ++ i) {
+    //memo[1][i] = 0;
+  //}
+  //memo[1][0] = 1;
+  pre[0] = 1;
   if ( a[1] > 0) {
     printf("0\n");
     return;
   } 
 
+  for (int i = 2; i <= n; ++ i) {
+    memset(now, 0, sizeof(now));
+    for (int j = 1; j <= MAX; ++ j) {
+      if ( a[i] == -1 || a[i] == j) {
+        add(now[j], pre[j]);
+        if ((j-1) || i==2) add(now[j], pre[j-1]);
+        add(now[j], pre[j+1]);
+      } else {
+        now[j] = 0L;
+      }
+    }
+    memcpy(pre, now, sizeof(now));
+  }
+
   int64 ans = 0;
   if ( a[n] == -1) {
-    for (int i = 0; i < MAX; ++ i) {
-      //printf("%d - %lld\n", i, dp(n, i));
-      ans += dp(n, i);
-      ans %= MOD;
+    for (int i = 0; i <= MAX; ++ i) {
+      //ans += dp(n, i);
+      ans += now[i];
+      //printf("%d - %lld\n", i, now[i]);
     }
   } else {
-    ans = dp(n, a[n]);
+    //ans = dp(n, a[n]);
+    ans = now[a[n]];
   }
   printf("%lld\n", ans);
 }
 
 int main() {
+  MAX = maxn-2;
   scanf("%d", &n);
   for (int i = 1; i <= n; ++ i) {
     scanf("%s", s);
