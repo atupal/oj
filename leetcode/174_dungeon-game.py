@@ -1,13 +1,11 @@
+# -*- coding: utf-8 -*-
 
 class Solution:
   # @param dungeon, a list of lists of integers
   # @return a integer
   def calculateMinimumHP(self, map):
-    dp = []
-    pre = []
-    for i in xrange(len(map)):
-        dp.append([0]*len(map[0]))
-        pre.append([0]*len(map[0]))
+    dp = [ [0]*len(map[0]) for _ in xrange(len(map))]
+    pre = [ [0]*len(map[0]) for _ in xrange(len(map))]
 
     def get(init):
       dp[0][0] = init+map[0][0]
