@@ -16,8 +16,8 @@ class ConnectingCars():
     high = self.car[-1][0]+self.car[-1][1]-sum(lengths)
     while low < high-2:
       #print low, high
-      mid = low + (high-low)/3.;
-      midmid = high - (high-low)/3.;
+      mid = low + (high-low)/3
+      midmid = high - (high-low)/3
       x1 = self.get(mid)
       x2 = self.get(midmid)
       if x1 < x2:
