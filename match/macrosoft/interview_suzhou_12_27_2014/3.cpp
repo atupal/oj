@@ -19,6 +19,10 @@ int64 min(int64 a,int64 b) {
   return a < b ? a : b;
 }
 
+/*
+   状态表示最后一个数为 i，和为 n， 所有的数的乘积与 m 的
+   最大公约数为 r 的个数。答案就是 n = n，r = m 的时候。
+ */
 inline
 int64 get(int64 i, int64 n, int64 r) {
   if (dp[i][n][r] != -1) return dp[i][n][r];
