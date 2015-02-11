@@ -35,7 +35,10 @@ class BuildingTowers {
       return ret;
     }
 
-    int64 maxHeight(int N, int K, vector <int> x, vector <int> t) {
+    int64 maxHeight(int64 N, int64 K, vector <int> x, vector <int> t) {
+
+      if ( x.empty() || (x.size() == 1 && x[0] == 1)) return (N-1)*K;
+
       if (x[0] != 1) {
         x.insert(x.begin(), 1);
         t.insert(t.begin(), 0);
@@ -53,7 +56,7 @@ class BuildingTowers {
           int64 mid = (1+low+high)>>1; 
           int64 h = mid;
           int flag = 1;
-          for (int j = i-1; j; -- j) {
+          for (int j = i-1; j>=0; -- j) {
             if ( h > t[j] ) {
               flag = 0;
               break;
@@ -90,14 +93,29 @@ class BuildingTowers {
 
         int64 r = low;
 
-        if (i==n-1) {
-          ans = max(ans, (N-x[i])*k+r);
-        }
-
-
         ans = max(ans, min(l, r) + get(max(r, l) - min(l, r), x[i]-x[i-1]));
-
       }
+
+      int64 low = 0;
+      int64 high = t[n-1];
+      while (low < high) {
+        int64 mid = (1+low+high)>>1; 
+        int64 h = mid;
+        int flag = 1;
+        for (int j = n-1; j>=0; -- j) {
+          if ( h > t[j] ) {
+            flag = 0;
+            break;
+          }
+          if (j-1>=0) h = max(0, h - k*( x[j]-x[j-1] ));
+        }
+        if (!flag) {
+          high = mid-1;
+        } else {
+          low = mid;
+        }
+      }
+      ans = max(ans, (N-x[n-1])*k+low);
 
       return ans;
     }
