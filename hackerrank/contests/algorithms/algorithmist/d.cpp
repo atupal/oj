@@ -8,93 +8,96 @@ using namespace std;
 const int maxn = 1e4+10;
 char s[maxn];
 int n;
-
-struct node {
-  int cnt;
-  int id;
-};
-
-int cmp(node a, node b) {
-  return a.cnt < b.cnt;
-}
-
-node sp[4];
-
+int cnt[4];
 int ans[4];
-void  dfs(int idx) {
-  node so[4];
-  if (idx > n) {
-    memcpy(so, sp, sizeof(sp));
-    sort(so, so+4, cmp);
-    int bound = 0;
-    while (bound+1<4 && so[bound+1].cnt==so[bound].cnt) ++ bound;
-    for (int i = 0; i <= bound; ++ i) {
-      ans[ so[i].id ] = 1;
-    }
-    return;
-  }
 
-  if (s[idx] == '?') {
-    memcpy(so, sp, sizeof(sp));
-    sort(so, so+4, cmp);
-    int bound = 0;
-    while (bound+1<4 && so[bound+1].cnt==so[bound].cnt) ++ bound;
-    for (int i = 0; i <= bound; ++ i) {
-      ++ sp[ so[i].id ].cnt;
-      dfs(idx+1);
-      -- sp[ so[i].id ].cnt;
-    }
-  } else {
-    if ( s[idx] == 'G') {
-      ++ sp[0].cnt;
-      dfs(idx+1);
-      -- sp[0].cnt;
-    } else if ( s[idx] == 'H') {
-      ++ sp[1].cnt;
-      dfs(idx+1);
-      -- sp[1].cnt;
-    } else if ( s[idx] == 'R') {
-      ++ sp[2].cnt;
-      dfs(idx+1);
-      -- sp[2].cnt;
-    } else {
-      ++ sp[3].cnt;
-      dfs(idx+1);
-      -- sp[3].cnt;
-    }
-  }
+inline
+int min(int a, int b) {
+  return a < b ? a : b;
 }
 
+inline
+int getmin() {
+  return min( min(cnt[0], cnt[1]), min(cnt[2], cnt[3]) );
+}
+
+
+int bug[maxn];
 void solve() {
-  memset(sp, 0, sizeof(sp));
-  memset(ans, 0, sizeof(ans));
-  for (int i= 0; i < 4; ++ i) {
-    sp[i].id = i;
-    sp[i].cnt = 0;
-  }
-  dfs(1);
-  if (ans[0]) {
-    printf("Go Kart Racing\n");
-  }
-  if (ans[1]) {
-    printf("Horse Riding\n");
-  }
-  if (ans[2]) {
-    printf("Rugby\n");
-  }
-  if (ans[3]) {
-    printf("Snow Polo\n");
+  memset(ans, 0 ,sizeof(ans));
+  int a[4];
+  for (int i = 0; i < 4; ++ i) 
+  for (int j = 0; j < 4; ++ j)
+  for (int k = 0; k < 4; ++ k)
+  for (int l = 0; l < 4; ++ l) if (i != j && i != k && i != l && j != k && j != l && k != l) {
+    a[0] = i, a[1] = j, a[2] = k, a[3] = l;
+    /*
+    for (int hehe = 0; hehe < 4; ++ hehe) {
+      printf("%d", a[hehe]);
+    }
+    printf(": ");
+    */
+    memset(cnt, 0, sizeof(cnt));
+    for (int x = 1; x <= n; ++ x) {
+      int m = getmin();
+      char ju = s[x];
+      if (ju == '?') {
+        for (int y = 0; y < 4; ++ y) {
+          if (cnt[a[y]] == m) {
+            ++ cnt[a[y]];
+            bug[x] = a[y];
+            break;
+          }
+        }
+      } else if (ju == 'G') {
+        bug[x] = 0;
+        ++ cnt[0];
+      } else if (ju == 'H') {
+        bug[x] = 1;
+        ++ cnt[1];
+      } else if (ju == 'R') {
+        bug[x] = 2;
+        ++ cnt[2];
+      } else if (ju == 'S') {
+        bug[x] = 3;
+        ++ cnt[3];
+      }
+    }
+
+    /*
+    for (int x = 1; x <= n; ++ x) {
+      printf("%d", bug[x]);
+    }
+    printf("\n");
+    */
+
+    int m = getmin();
+    for (int x = 0; x < 4; ++ x) {
+      if (cnt[x] == m) {
+        ans[x] = 1;
+      }
+    }
+
   }
 }
 
 int main() {
   int t;
   scanf("%d", &t);
-  while (t--) {
+  char out[4][maxn] = {"Go Kart Racing", "Horse Riding", "Rugby", "Snow Polo"};
+  for (int c = 0; c < t; ++ c) {
     scanf("%d", &n);
     scanf("%s", s+1);
     solve();
-    printf("\n");
+    //printf("%d:%d\n", c, n);
+    for (int i = 0; i < 4; ++ i) {
+      if (ans[i]) {
+        printf("%s\n", out[i]);
+      }
+    }
+
+
+    if (c < t-1) printf("\n");
   }
 }
 
