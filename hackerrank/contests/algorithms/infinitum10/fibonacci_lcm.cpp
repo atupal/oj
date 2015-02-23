@@ -8,14 +8,12 @@
 using namespace std;
 
 typedef long long ll;
-const int maxn = 101;
-const ll MOD = (ll)1e9+7;
-//const ll MOD = 19ll;
-int cnt;
+const ll maxn = 101ll;
+const ll MOD = (ll)1e9+7ll;
+ll cnt;
 ll a[maxn];
-ll a_copy[maxn];
 ll mul[maxn];
-map<ll, int> facts;
+map<pair<ll, ll>, ll> memo;
 
 ll fib(ll n);
 ll gcdEx(ll a, ll b, ll *x, ll *y);
@@ -38,102 +36,37 @@ ll gcd(ll a, ll b) {
   return b == 0 ? a : gcd(b, a%b);
 }
 
-ll get() {
-  ll g = fib(a[0]);
-  for (int i = 1; i < cnt; ++ i) {
-    g = gcd(g, fib(a[i]));
+/*
+   Let A(g, i) = gcd(Fg, lcm(Fa1, Fa2,...,Fai)).
+   then the ans is A(0, N)
+   Let X = lcm(Fa1, Fa2,...,Fai-1).
+   use distributive lattice, we have:
+   A(g, i) = gcd(Fg, lcm(Fai, X)) = lcm(Fgcd(g, ai), gcd(Fg, X))
+           = Fgcd(g, ai) * gcd(Fg, X) / gcd(Fgcd(g, ai), gcd(Fg, X) )
+           = Fgcd(g, ai) * gcd(Fg, X) / gcd(Fgcd(g, ai), Fg, X)
+           = Fgcd(g, ai) * gcd(Fg, X) / gcd(Fgcd(g, ai), X)
+           = Fgcd(g, ai) * A(g, i-1) / A(gcd(g, ai), i-1)
+
+   So if i == 0: A(g, i) = 1
+   else A(g, i) = Fgcd(g, ai) * A(g, i-1) / A(gcd(g, ai), i-1)
+ */
+ll A(ll g, ll i) {
+  if (i == -1) return 1ll;
+  if (memo[make_pair(g, i)]) {
+    return memo[make_pair(g, i)];
   }
-  ll ans = g;
-  for (int i = 0; i < cnt; ++ i) {
-    ans *= fib(a[i])/g;
-    ans %= MOD;
-  }
-  return ans;
+
+  ll q = A( gcd(g, a[i]), i-1 );
+  ll x, y;
+  gcdEx(MOD, q, &x, &y);
+  while (y < 0) y += MOD;
+  return memo[make_pair(g, i)] = fib(gcd(g, a[i])) * A(g, i-1) % MOD * y % MOD;
 }
 
 void solve() {
-  for (int i = 0; i < cnt; ++ i) {
-    ll n = a[i];
-    for (ll j = 2; j*j <= a[i]; ++ j) {
-      while (n%j==0) {
-        facts[j] = 1;
-        n /= j;
-      }
-    }
-    if (n > 1) {
-      facts[n] = 1;
-    }
-  }
-
-
-  memcpy(a_copy, a, sizeof(a));
-  for (int i = 0; i < cnt; ++ i) {
-    mul[i] = 1;
-  }
-
-  ll ans = 1;
-  for (__typeof(facts.begin()) it = facts.begin(); it != facts.end(); ++ it) {
-    ll fact = it->first;
-    while (1) {
-      int s = 0;
-      for (int i = 0; i < cnt; ++ i) {
-        if (a[i] % fact == 0) {
-          s += 1;
-        }
-      }
-      if (s < 2) break;
-      //printf("fact: %lld\n", fact);
-      //ans = ans * fib(fact) % MOD;
-      ans *= fact;
-      for (int i = 0; i < cnt; ++ i) {
-        if (a[i] % fact == 0) {
-          a[i] /= fact;
-          mul[i] *= fact;
-        }
-      }
-    }
-  }
-
-  ans = fib(ans);
-  for (int i = 0; i < cnt; ++ i) {
-    if (a[i] > 0) {
-      ll x, y;
-      gcdEx(MOD, fib( mul[i] ), &x, &y );
-      while (y < 0) {
-        y += MOD;
-      }
-      ans = ans * ( fib(a_copy[i]) * y % MOD)% MOD;
-    }
-  }
-
-  printf("%lld\n", ans);
-
+  printf("%lld\n", A(0, cnt-1));
 }
 
-void solve2() {
-  printf("fib:%lld\n", fib(30));
-  memcpy(a_copy, a, sizeof(a));
-  ll m = 1ll;
-  for (int i = 0; i < cnt; ++ i) {
-    m = m*fib(a[i])%MOD;
-  }
-  for (int i = 0; i < cnt; ++ i) {
-    ll x, y;
-    gcdEx(MOD, fib(a[i]), &x, &y);
-    a[i] = m*y%MOD;
-    while (a[i] < 0) {
-      a[i] += MOD;
-    }
-  }
-  ll g = a[0];
-  for (int i = 1; i < cnt; ++ i) {
-    g = gcd(g, a[i]);
-  }
-  ll x, y;
-  gcdEx(MOD, g, &x, &y);
-  printf("%lld\n", m*y%MOD);
-
-}
 
 int main() {
   /*
@@ -164,13 +97,14 @@ int main() {
   } else if (cnt == 1) {
     printf("%lld\n", fib( a[0] ));
   } else {
-    solve2();
+    solve();
   }
 
   return 0;
 }
 
 ll fib(ll n) {
+  if (n == 0) return 0ll;
   ll a = 1, b = 1;
   ll A[2][2], ret[2][2], base[2][2], tmp[2][2];
   
@@ -197,7 +131,7 @@ ll fib(ll n) {
     tmp[1][0] = (base[1][0] * base[0][0] % MOD + base[1][1] * base[1][0] % MOD)%MOD;
     tmp[1][1] = (base[1][0] * base[0][1] % MOD + base[1][1] * base[1][1] % MOD)%MOD;
     memcpy(base, tmp, sizeof(tmp));
-    n >>= 1;
+    n >>= 1ll;
   }
   ll ans = (ret[0][0] * a % MOD + ret[0][1] * b % MOD) % MOD;
   return ans;
@@ -205,7 +139,7 @@ ll fib(ll n) {
 
 ll gcdEx(ll a, ll b, ll *x, ll *y) {
   if(b==0) {
-    *x = 1,*y = 0;
+    *x = 1ll,*y = 0ll;
     return a;
   } else {
     ll r = gcdEx(b, a%b, x, y);
