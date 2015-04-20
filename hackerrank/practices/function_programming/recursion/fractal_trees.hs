@@ -6,7 +6,6 @@ tree (x, y) hight iter
                            zip [x+1..x+hight] [y+hight..y+hight*2-1]],
                 concat [tree (x-hight, y+hight*2) (hight/2) (iter-1), tree (x+hight, y+hight*2) (hight/2) (iter-1)] ]
 
-
 printLine t y = do
   mapM_ (\x -> if (x, y) `elem` t then putStr "1" else putStr "_") [1..100]
   putStrLn ""
@@ -21,5 +20,4 @@ printTree n = do
 main = do
   line <- getLine
   let n = (read :: String -> Int) line
-
   printTree n
