@@ -12,6 +12,13 @@ int A[maxn];
 u64int memo[14][14][14][14][5];
 int init[14][14][14][14][5];
 
+/*
+ * dp[a][b][c][d][e]
+ * 表示面值只有一张的 牌数,b 表示有面值出现了两次的牌数,c 表示 三次...d...
+ * e 表示以哪类牌结尾
+ * 比如 1 2 2 3 3 4 4 4
+ * 可以表示为 a = 1, b = 2, c = 1, d = 0
+ * */
 u64int dp(int a, int b, int c, int d, int e) {
   if (init[a][b][c][d][e]) return memo[a][b][c][d][e];
   init[a][b][c][d][e] = 1;
