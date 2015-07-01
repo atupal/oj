@@ -43,19 +43,21 @@ def login():
   print r
 
 
-
 def submit_code():
   with open(sys.argv[1]) as fi:
     data = {
         'problem_id': sys.argv[1].split('_')[0],
         'language': '4',
         'source': fi.read(),
-        'submit': 'Submit'
+        'submit': 'Submit',
+        'encoded': '0',
     }
   
   #r = s.post('http://poj.org/submit', proxies=http_proxy, data=data)
   r = s.post('http://poj.org/submit', data=data)
   print r
+  if r.status_code != 200:
+      print r.content
 
 
 def colorful_print(text, color='red'):
