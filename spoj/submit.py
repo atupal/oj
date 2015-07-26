@@ -66,7 +66,8 @@ def fetch_result():
   status_url = 'http://www.spoj.com/status/ns=14750133'
   while 1:
     try:
-      r = s.get(status_url)
+      #r = s.get(status_url)
+      r = requests.get(status_url)
       soup = BeautifulSoup(r.text)
       os.system('cls')
       time.sleep(0.2)
