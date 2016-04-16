@@ -4,10 +4,10 @@
 ''''which python  >/dev/null && exec python  "$0" "$@" # '''
 
 
-p1 = [1] * 367
-p2 = [1] * 367
+p1 = [1] * 368
+p2 = [1] * 368
 
-for n in xrange(1, 367):
+for n in xrange(1, 368):
 
     leapcnt = n / 4
 
@@ -33,12 +33,7 @@ for i in xrange(n):
 
     p = int(p * 1000)
 
-    if (p == 1000):
-        print 367
-        continue
-
-
-    for ans in xrange(1, 367):
+    for ans in xrange(1, 368):
 
         if (p2[ans]-p1[ans])*1000 >= p2[ans] * p:
 
