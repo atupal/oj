@@ -52,3 +52,61 @@ int main() {
   return 0;
 }
 
+
+/*
+ * x = sqrt(2k/6)
+ * y = sqrt(3k/6)
+ * z = sqrt(k/6)
+ *
+ *
+ * (  12(x+z)(y+z) - 6(x+y)^2  )^2 + 6(  12(x+z)(y+z) - 6(x+y)^2  ) (x^2+y^2+z^2)    -  96sqrt(3)xy^2z  + 2(3xz + sqrt(2)y^2)^2 + 4sqrt(6)xy - 4
+ *
+ *
+ *
+ *
+ * replaced with k:
+ *
+ *
+
+
+
+(  12(sqrt(2k/6)+sqrt(k/6))(sqrt(3k/6)+sqrt(k/6)) - 6(sqrt(2k/6)+sqrt(3k/6))^2  )^2 
+
+
+
+
+(-3+2 sqrt(2)+2 sqrt(3))^2 k^2
+
+
++ 6(  12(sqrt(2k/6)+sqrt(k/6))(sqrt(3k/6)+sqrt(k/6)) - 6(sqrt(2k/6)+sqrt(3k/6))^2  ) (sqrt(2k/6)^2+sqrt(3k/6)^2+sqrt(k/6)^2)   
+
+
+6(-3+2 sqrt(2)+2 sqrt(3)) k^2
+
+
+ -  96sqrt(3)sqrt(2k/6)sqrt(3k/6)^2sqrt(k/6)  
+ 
+ 8 sqrt(6) k^2
+ 
+ 
+ + 2(3sqrt(2k/6)sqrt(k/6) + sqrt(2)sqrt(3k/6)^2)^2 + 4sqrt(6)sqrt(2k/6)sqrt(3k/6) - 4
+ 
+ 
+ 4 (k^2+k-1)
+ 
+ 
+ 
+ 
+ (-3+2 sqrt(2)+2 sqrt(3))^2 k^2 + 6(-3+2 sqrt(2)+2 sqrt(3)) k^2  -  96sqrt(3)sqrt(2k/6)sqrt(3k/6)^2sqrt(k/6)  +  4 (k^2+k-1)
+ 
+ 
+ 
+ 15 k^2+4 k-4
+ *
+ *
+ *
+ * final reults:
+ *
+ * https://www.wolframalpha.com/input/?i=simplify+(-3%2B2+sqrt(2)%2B2+sqrt(3))%5E2+k%5E2+%2B+6(-3%2B2+sqrt(2)%2B2+sqrt(3))+k%5E2++-++96sqrt(3)sqrt(2k%2F6)sqrt(3k%2F6)%5E2sqrt(k%2F6)++%2B++4+(k%5E2%2Bk-1)
+ *
+ * */
