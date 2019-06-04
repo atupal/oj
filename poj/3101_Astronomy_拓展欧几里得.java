@@ -21,7 +21,7 @@ public class _3101_Astronomy {
         BigInteger b = new BigInteger(st.nextToken());
 
         BigInteger ans1 = a.multiply(b);
-        BigInteger ans2 = a.subtract(b).abs().multiply(Two);
+        BigInteger ans2 = a.subtract(b).abs();//.multiply(Two);
         BigInteger g = ans1.gcd(ans2);
         if (!ans2.equals(Zero)) {
             ans1 = ans1.divide(g);
@@ -35,7 +35,7 @@ public class _3101_Astronomy {
             b = new BigInteger(st.nextToken());
 
             BigInteger newans1 = a.multiply(b);
-            BigInteger newans2 = a.subtract(b).abs().multiply(Two);
+            BigInteger newans2 = a.subtract(b).abs();//.multiply(Two);
             g = newans1.gcd(newans2);
             if (!newans2.equals(Zero)) {
                 newans1 = newans1.divide(g);
@@ -56,6 +56,13 @@ public class _3101_Astronomy {
             ans1 = ans1.divide(g);
             ans2 = ans2.divide(g);
         }
+        // Optimize: See the commented //.multiply(Two) in above lines.
+        if (ans1.mod(Two).equals(Zero)) {
+            ans1 = ans1.divide(Two);
+        } else {
+            ans2 = ans2.multiply(Two);
+        }
+
         System.out.print(ans1);
         System.out.print(" ");
         System.out.println(ans2);
